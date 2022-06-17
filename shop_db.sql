@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 30, 2022 at 03:43 PM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.2
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 17-06-2022 a las 16:02:55
+-- Versión del servidor: 10.4.24-MariaDB
+-- Versión de PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `shop_db`
+-- Base de datos: `shop_db`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cart`
+-- Estructura de tabla para la tabla `cart`
 --
 
 CREATE TABLE `cart` (
@@ -32,15 +32,22 @@ CREATE TABLE `cart` (
   `user_id` int(100) NOT NULL,
   `pid` int(100) NOT NULL,
   `name` varchar(100) NOT NULL,
-  `price` int(100) NOT NULL,
+  `price` decimal(4,2) NOT NULL,
   `quantity` int(100) NOT NULL,
   `image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `cart`
+--
+
+INSERT INTO `cart` (`id`, `user_id`, `pid`, `name`, `price`, `quantity`, `image`) VALUES
+(51, 31, 24, 'shesse burger', '3.50', 1, 'imagen_2022-06-17_065749675.png');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `message`
+-- Estructura de tabla para la tabla `message`
 --
 
 CREATE TABLE `message` (
@@ -55,7 +62,7 @@ CREATE TABLE `message` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `orders`
+-- Estructura de tabla para la tabla `orders`
 --
 
 CREATE TABLE `orders` (
@@ -67,7 +74,7 @@ CREATE TABLE `orders` (
   `method` varchar(50) NOT NULL,
   `address` varchar(500) NOT NULL,
   `total_products` varchar(1000) NOT NULL,
-  `total_price` int(100) NOT NULL,
+  `total_price` decimal(4,2) NOT NULL,
   `placed_on` varchar(50) NOT NULL,
   `payment_status` varchar(20) NOT NULL DEFAULT 'pending'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -75,7 +82,7 @@ CREATE TABLE `orders` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `products`
+-- Estructura de tabla para la tabla `products`
 --
 
 CREATE TABLE `products` (
@@ -83,14 +90,21 @@ CREATE TABLE `products` (
   `name` varchar(100) NOT NULL,
   `category` varchar(20) NOT NULL,
   `details` varchar(500) NOT NULL,
-  `price` int(100) NOT NULL,
+  `price` decimal(4,2) NOT NULL,
   `image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `category`, `details`, `price`, `image`) VALUES
+(24, 'shesse burger', 'vegitables', 'Hamburguesa de quedo', '3.50', 'imagen_2022-06-17_065749675.png');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Estructura de tabla para la tabla `users`
 --
 
 CREATE TABLE `users` (
@@ -102,10 +116,17 @@ CREATE TABLE `users` (
   `image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `user_type`, `image`) VALUES
+(31, 'Norman Rafael', 'plan703035@gmail.com', '202cb962ac59075b964b07152d234b70', 'user', 'pic-3.png');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wishlist`
+-- Estructura de tabla para la tabla `wishlist`
 --
 
 CREATE TABLE `wishlist` (
@@ -113,86 +134,86 @@ CREATE TABLE `wishlist` (
   `user_id` int(100) NOT NULL,
   `pid` int(100) NOT NULL,
   `name` varchar(100) NOT NULL,
-  `price` int(100) NOT NULL,
+  `price` decimal(4,2) NOT NULL,
   `image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `cart`
+-- Indices de la tabla `cart`
 --
 ALTER TABLE `cart`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `message`
+-- Indices de la tabla `message`
 --
 ALTER TABLE `message`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `orders`
+-- Indices de la tabla `orders`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `products`
+-- Indices de la tabla `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Indices de la tabla `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `wishlist`
+-- Indices de la tabla `wishlist`
 --
 ALTER TABLE `wishlist`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `cart`
+-- AUTO_INCREMENT de la tabla `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
--- AUTO_INCREMENT for table `message`
+-- AUTO_INCREMENT de la tabla `message`
 --
 ALTER TABLE `message`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `orders`
+-- AUTO_INCREMENT de la tabla `orders`
 --
 ALTER TABLE `orders`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT for table `products`
+-- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
--- AUTO_INCREMENT for table `wishlist`
+-- AUTO_INCREMENT de la tabla `wishlist`
 --
 ALTER TABLE `wishlist`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
