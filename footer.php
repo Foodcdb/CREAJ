@@ -3,39 +3,38 @@
    <section class="box-container">
 
       <div class="box">
-         <h3>quick links</h3>
-         <a href="home.php"> <i class="fas fa-angle-right"></i> home</a>
-         <a href="shop.php"> <i class="fas fa-angle-right"></i> shop</a>
-         <a href="about.php"> <i class="fas fa-angle-right"></i> about</a>
-         <a href="contact.php"> <i class="fas fa-angle-right"></i> contact</a>
+         <h3>Links</h3>
+         <a href="home.php"> <i class="fas fa-angle-right"></i>Inicio</a>
+         <a href="shop.php"> <i class="fas fa-angle-right"></i>Tienda</a>
+         <a href="about.php"> <i class="fas fa-angle-right"></i>Aserca de</a>
+         <a href="contact.php"> <i class="fas fa-angle-right"></i>contactanos</a>
       </div>
 
       <div class="box">
-         <h3>extra links</h3>
-         <a href="cart.php"> <i class="fas fa-angle-right"></i> cart</a>
-         <a href="wishlist.php"> <i class="fas fa-angle-right"></i> wishlist</a>
-         <a href="login.php"> <i class="fas fa-angle-right"></i> login</a>
-         <a href="register.php"> <i class="fas fa-angle-right"></i> register</a>
+         <h3>links</h3>
+         <a href="cart.php"> <i class="fas fa-angle-right"></i> carrito</a>
+         <a href="wishlist.php"> <i class="fas fa-angle-right"></i> lista de deseos</a>
+         <a href="login.php"> <i class="fas fa-angle-right"></i> Inicio</a>
+         <a href="register.php"> <i class="fas fa-angle-right"></i> registro</a>
       </div>
 
       <div class="box">
-         <h3>contact info</h3>
-         <p> <i class="fas fa-phone"></i> +123-456-7890 </p>
-         <p> <i class="fas fa-phone"></i> +111-222-3333 </p>
-         <p> <i class="fas fa-envelope"></i> shaikhanas@gmail.com </p>
-         <p> <i class="fas fa-map-marker-alt"></i> mumbai, india - 400104 </p>
+         <h3>Informacion</h3>
+         <p> <i class="fas fa-phone"></i>+503 8765-8945</p>
+         <p> <i class="fas fa-phone"></i>+503 2315-5678</p>
+         <p> <i class="fas fa-envelope"></i> creaj2022@gmail.com</p>
+         <p> <i class="fas fa-map-marker-alt"></i>Ciudadela Don Bosco,Colegio don Bosco</p>
       </div>
 
       <div class="box">
-         <h3>follow us</h3>
+         <h3>Siguenos</h3>
          <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
          <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
          <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
-         <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
       </div>
 
    </section>
 
-   <p class="credit"> &copy; copyright @ <?= date('Y'); ?> by <span>mr. web designer</span> | all rights reserved! </p>
+   <p class="credit"> &copy; copyright @ <?= date('Y'); ?> by <span>FoodKingdom</span> | Todos los derechos reservados </p>
 
 </footer>

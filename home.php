@@ -77,12 +77,12 @@ if(isset($_POST['add_to_cart'])){
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>home page</title>
+   <title>FOOD</title>
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -100,10 +100,10 @@ if(isset($_POST['add_to_cart'])){
    <section class="home">
 
       <div class="content">
-         <span>don't panic, go organice</span>
-         <h3>Reach For A Healthier You With Organic Foods</h3>
+         <span>Sin panico, come sano</span>
+         <h3>Productos para aprender a comer sano</h3>
          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto natus culpa officia quasi, accusantium explicabo?</p>
-         <a href="about.php" class="btn">about us</a>
+         <a href="about.php" class="btn">Sobre Nosotros</a>
       </div>
 
    </section>

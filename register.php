@@ -2,6 +2,7 @@
 
 include 'config.php';
 
+
 if(isset($_POST['submit'])){
 
    $name = $_POST['name'];
@@ -31,13 +32,22 @@ if(isset($_POST['submit'])){
          $insert = $conn->prepare("INSERT INTO `users`(name, email, password, image) VALUES(?,?,?,?)");
          $insert->execute([$name, $email, $pass, $image]);
 
+         $sql = "SELECT * FROM `users` WHERE email = ? ";
+         $stmt = $conn->prepare($sql);
+         $stmt->execute([$email]);
+         $rowCount = $stmt->rowCount(); 
+         $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
          if($insert){
             if($image_size > 2000000){
                $message[] = 'image size is too large!';
             }else{
                move_uploaded_file($image_tmp_name, $image_folder);
                $message[] = 'registered successfully!';
-               header('location:login.php');
+               session_start();
+
+               $_SESSION['user_id'] = $row['id'];
+               header('location:home.php');
             }
          }
 
@@ -83,13 +93,13 @@ if(isset($message)){
 <section class="form-container">
 
    <form action="" enctype="multipart/form-data" method="POST">
-      <h3>register now</h3>
-      <input type="text" name="name" class="box" placeholder="enter your name" required>
-      <input type="email" name="email" class="box" placeholder="enter your email" required>
-      <input type="password" name="pass" class="box" placeholder="enter your password" required>
-      <input type="password" name="cpass" class="box" placeholder="confirm your password" required>
+      <h3>registrarse ahora</h3>
+      <input type="text" name="name" class="box" placeholder="Ingresa tu nombre" required>
+      <input type="email" name="email" class="box" placeholder="Ingresa tu correo" required>
+      <input type="password" name="pass" class="box" placeholder="Ingresa tu contraseña" required>
+      <input type="password" name="cpass" class="box" placeholder="confirma tu contraseña" required>
       <input type="file" name="image" class="box" required accept="image/jpg, image/jpeg, image/png">
-      <input type="submit" value="register now" class="btn" name="submit">
+      <input type="submit" value="registrase ahora" class="btn" name="submit">
       <p>already have an account? <a href="login.php">login now</a></p>
    </form>
 

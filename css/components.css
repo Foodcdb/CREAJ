@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 
 :root{
-   --green:#27ae60;
-   --orange:#f39c12;
-   --red:#e74c3c;
+   --green:#293462;
+   --orange:#FF5F00;
+   --red:#EC9B3B;
    --black:#333;
    --light-color:#666;
    --white:#fff;
@@ -231,7 +231,7 @@ section{
 .header .flex .logo{
    font-size: 2.5rem;
    color:var(--black);
-}
+}  
 
 .header .flex .logo span{
    color:var(--green);

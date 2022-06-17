@@ -15,7 +15,7 @@ if(isset($_POST['add_product'])){
    $name = $_POST['name'];
    $name = filter_var($name, FILTER_SANITIZE_STRING);
    $price = $_POST['price'];
-   $price = filter_var($price, FILTER_SANITIZE_STRING);
+   
    $category = $_POST['category'];
    $category = filter_var($category, FILTER_SANITIZE_STRING);
    $details = $_POST['details'];
@@ -77,6 +77,7 @@ if(isset($_GET['delete'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="images/a.png" type="icon">
    <title>products</title>
 
    <!-- font awesome cdn link  -->
@@ -92,22 +93,22 @@ if(isset($_GET['delete'])){
 
 <section class="add-products">
 
-   <h1 class="title">add new product</h1>
+   <h1 class="title">Agregar nuevo producto</h1>
 
    <form action="" method="POST" enctype="multipart/form-data">
       <div class="flex">
          <div class="inputBox">
-         <input type="text" name="name" class="box" required placeholder="enter product name">
+         <input type="text" name="name" class="box" required placeholder="Ingresa nombre del producto">
          <select name="category" class="box" required>
-            <option value="" selected disabled>select category</option>
-               <option value="vegitables">vegitables</option>
-               <option value="fruits">fruits</option>
-               <option value="meat">meat</option>
-               <option value="fish">fish</option>
+            <option value="" selected disabled>Seleccionar categoria</option>
+               <option value="vegitables">Hambuerguesas</option>
+               <option value="fruits">pizza</option>
+               <option value="meat">Otras comidas</option>
+               <option value="fish">Bebidas</option>
          </select>
          </div>
          <div class="inputBox">
-         <input type="number" min="0" name="price" class="box" required placeholder="enter product price">
+          <input type="number" min="0" step="0.01" name="price" class="box" required placeholder="Precio del producto">
          <input type="file" name="image" required class="box" accept="image/jpg, image/jpeg, image/png">
          </div>
       </div>

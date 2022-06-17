@@ -85,7 +85,7 @@ if(isset($_GET['delete_all'])){
 
 <section class="wishlist">
 
-   <h1 class="title">products added</h1>
+   <h1 class="title">Productos agregados</h1>
 
    <div class="box-container">
 
@@ -113,15 +113,15 @@ if(isset($_GET['delete_all'])){
       $grand_total += $fetch_wishlist['price'];
       }
    }else{
-      echo '<p class="empty">your wishlist is empty</p>';
+      echo '<p class="empty">Tu lista de deseos esta vacia</p>';
    }
    ?>
    </div>
 
    <div class="wishlist-total">
-      <p>grand total : <span>$<?= $grand_total; ?>/-</span></p>
-      <a href="shop.php" class="option-btn">continue shopping</a>
-      <a href="wishlist.php?delete_all" class="delete-btn <?= ($grand_total > 1)?'':'disabled'; ?>">delete all</a>
+      <p>Total a pagar : <span>$<?= $grand_total; ?>/-</span></p>
+      <a href="shop.php" class="option-btn">Continuar Comprando</a>
+      <a href="wishlist.php?delete_all" class="delete-btn <?= ($grand_total > 1)?'':'disabled'; ?>">Eliminar todo</a>
    </div>
 
 </section>
