@@ -97,10 +97,10 @@ if(isset($_POST['add_to_cart'])){
 
 <section class="p-category">
 
-   <a href="category.php?category=fruits">Hamburguesas</a>
-   <a href="category.php?category=vegitables">Pizza</a>
-   <a href="category.php?category=fish">Pollo</a>
-   <a href="category.php?category=meat">Bebida</a>
+   <a href="category.php?category=Hamburguesas">Hamburguesas</a>
+   <a href="category.php?category=Pizzas">Pizza</a>
+   <a href="category.php?category=Pollo">Pollo</a>
+   <a href="category.php?category=Bebidas">Bebida</a>
 
 </section>
 
