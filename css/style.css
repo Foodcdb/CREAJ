@@ -1,7 +1,7 @@
 @import url('components.css');
 
 .home-bg{
-   background: url(../images/home-bg.jpg) no-repeat;
+   background-image: url(../images/Wallpaper.jpg);
    background-size: cover;
    background-position: center;
 }
@@ -17,7 +17,7 @@
 }
 
 .home-bg .home .content span{
-   color:var(--orange);
+   color: aliceblue;
    font-size: 2.5rem;
 }
 
@@ -25,14 +25,14 @@
    font-size: 3rem;
    text-transform: uppercase;
    margin-top: 1.5rem;
-   color:var(--black);
+   color: aliceblue;
 }
 
 .home-bg .home .content p{
    font-size: 1.6rem;
    padding:1rem 0;
    line-height: 2;
-   color:var(--light-color);
+   color: aliceblue;
 }
 
 .home-bg .home .content a{

@@ -102,7 +102,7 @@ if(isset($_POST['add_to_cart'])){
       <div class="content">
          <span>Sin panico, come sano</span>
          <h3>Productos para aprender a comer sano</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto natus culpa officia quasi, accusantium explicabo?</p>
+         <p>Prueba nuestros ricos y deliciosos productos de calidad , para saciar esa hambre.</p>
          <a href="about.php" class="btn">Sobre Nosotros</a>
       </div>
 
@@ -112,36 +112,36 @@ if(isset($_POST['add_to_cart'])){
 
 <section class="home-category">
 
-   <h1 class="title">shop by category</h1>
+   <h1 class="title">Menú</h1>
 
    <div class="box-container">
 
       <div class="box">
-         <img src="images/cat-1.png" alt="">
-         <h3>fruits</h3>
-         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat.</p>
-         <a href="category.php?category=fruits" class="btn">fruits</a>
+         <img src="images/Hamburguesa.jpg" alt="">
+         <h3>Hamburguesas</h3>
+         <p>Degusta de estas exquisitas hamburguesas.</p>
+         <a href="category.php?category=Hambuerguesa" class="btn">Hamburguesa</a>
       </div>
 
       <div class="box">
-         <img src="images/cat-2.png" alt="">
-         <h3>meat</h3>
-         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat.</p>
-         <a href="category.php?category=meat" class="btn">meat</a>
+         <img src="images/Pizza.jpg" alt="">
+         <h3>Pizza</h3>
+         <p>Pizzas para esos días para estar con la familia o amigos.</p>
+         <a href="category.php?category=Pizaas" class="btn">Pizza</a>
       </div>
 
       <div class="box">
-         <img src="images/cat-3.png" alt="">
-         <h3>vegitables</h3>
-         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat.</p>
-         <a href="category.php?category=vegitables" class="btn">vegitables</a>
+         <img src="images/Pollo.jpg" alt="">
+         <h3>Pollo</h3>
+         <p>Rico pollo para degustar a tu paladar.</p>
+         <a href="category.php?category=Pollo" class="btn">Pollo</a>
       </div>
 
       <div class="box">
-         <img src="images/cat-4.png" alt="">
-         <h3>fish</h3>
-         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat.</p>
-         <a href="category.php?category=fish" class="btn">fish</a>
+         <img src="images/Bebidas.jpg" alt="">
+         <h3>Bebidas</h3>
+         <p>Degusta de nuestras bebidas para matar esa sed.</p>
+         <a href="category.php?category=Bebidas" class="btn">Bebida</a>
       </div>
 
    </div>
@@ -150,7 +150,7 @@ if(isset($_POST['add_to_cart'])){
 
 <section class="products">
 
-   <h1 class="title">latest products</h1>
+   <h1 class="title">Ultimos productos</h1>
 
    <div class="box-container">
 
@@ -170,15 +170,15 @@ if(isset($_POST['add_to_cart'])){
       <input type="hidden" name="p_price" value="<?= $fetch_products['price']; ?>">
       <input type="hidden" name="p_image" value="<?= $fetch_products['image']; ?>">
       <input type="number" min="1" value="1" name="p_qty" class="qty">
-      <input type="submit" value="add to wishlist" class="option-btn" name="add_to_wishlist">
-      <input type="submit" value="add to cart" class="btn" name="add_to_cart">
+      <input type="submit" value="Lista de deseos" class="option-btn" name="add_to_wishlist">
+      <input type="submit" value="Agregar al carrito" class="btn" name="add_to_cart">
    </form>
    <?php
       }
    }else{
       echo '<p class="empty">no products added yet!</p>';
    }
-   ?>
+   ?> 
 
    </div>
 

@@ -37,14 +37,14 @@ if(!isset($user_id)){
 
       <div class="box">
          <img src="images/about-img-1.png" alt="">
-         <h3>why choose us?</h3>
+         <h3>¿Por qué elegirnos?</h3>
          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, a quod, quis alias eius dignissimos pariatur laborum dolorem ad ullam iure, consequatur autem animi illo odit! Atque quia minima voluptatibus.</p>
          <a href="contact.php" class="btn">contact us</a>
       </div>
 
       <div class="box">
          <img src="images/about-img-2.png" alt="">
-         <h3>what we provide?</h3>
+         <h3>¿Qué proporcionamos?</h3>
          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, a quod, quis alias eius dignissimos pariatur laborum dolorem ad ullam iure, consequatur autem animi illo odit! Atque quia minima voluptatibus.</p>
          <a href="shop.php" class="btn">our shop</a>
       </div>
@@ -55,7 +55,7 @@ if(!isset($user_id)){
 
 <section class="reviews">
 
-   <h1 class="title">clients reivews</h1>
+   <h1 class="title">Opiniones de nuestros clientes</h1>
 
    <div class="box-container">
 
