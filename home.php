@@ -100,9 +100,9 @@ if(isset($_POST['add_to_cart'])){
    <section class="home">
 
       <div class="content">
-         <span>Sin panico, come sano</span>
+         <span>Buena comida, buen humor.</span>
          <h3>Productos para aprender a comer sano</h3>
-         <p>Prueba nuestros ricos y deliciosos productos de calidad , para saciar esa hambre.</p>
+         <p>Prueba nuestros ricos y deliciosos productos de calidad.</p>
          <a href="about.php" class="btn">Sobre Nosotros</a>
       </div>
 

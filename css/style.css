@@ -24,13 +24,13 @@
 .home-bg .home .content h3{
    font-size: 3rem;
    text-transform: uppercase;
-   margin-top: 1.5rem;
+   margin-top: 1rem;
    color: aliceblue;
 }
 
 .home-bg .home .content p{
    font-size: 1.6rem;
-   padding:1rem 0;
+   padding:2rem 1;
    line-height: 2;
    color: aliceblue;
 }
