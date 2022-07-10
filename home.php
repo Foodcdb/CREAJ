@@ -120,14 +120,14 @@ if(isset($_POST['add_to_cart'])){
          <img src="images/Hamburguesa.jpg" alt="">
          <h3>Hamburguesas</h3>
          <p>Degusta de estas exquisitas hamburguesas.</p>
-         <a href="category.php?category=Hambuerguesa" class="btn">Hamburguesa</a>
+         <a href="category.php?category=Hamburguesas" class="btn">Hamburguesas</a>
       </div>
 
       <div class="box">
          <img src="images/Pizza.jpg" alt="">
          <h3>Pizza</h3>
          <p>Pizzas para esos días para estar con la familia o amigos.</p>
-         <a href="category.php?category=Pizaas" class="btn">Pizza</a>
+         <a href="category.php?category=Pizzas" class="btn">Pizza</a>
       </div>
 
       <div class="box">
@@ -176,7 +176,7 @@ if(isset($_POST['add_to_cart'])){
    <?php
       }
    }else{
-      echo '<p class="empty">no products added yet!</p>';
+      echo '<p class="empty">Sin productos agregados aun</p>';
    }
    ?> 
 

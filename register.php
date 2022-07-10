@@ -100,7 +100,7 @@ if(isset($message)){
       <input type="password" name="cpass" class="box" placeholder="confirma tu contraseña" required>
       <input type="file" name="image" class="box" required accept="image/jpg, image/jpeg, image/png">
       <input type="submit" value="registrase ahora" class="btn" name="submit">
-      <p>already have an account? <a href="login.php">login now</a></p>
+      <p>¿Ya tienes una cuenta? <a href="login.php">Inicia sesión</a></p>
    </form>
 
 </section>

@@ -6,7 +6,7 @@
    --red:#EC9B3B;
    --black:#333;
    --light-color:#666;
-   --white:#fff;
+   --white:rgb(255, 255, 255);
    --light-bg:#f6f6f6;
    --border:.2rem solid var(--black);
    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);

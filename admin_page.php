@@ -33,7 +33,7 @@ if(!isset($admin_id)){
 
 <section class="dashboard">
 
-   <h1 class="title">dashboard</h1>
+   <h1 class="title">Tablero</h1>
 
    <div class="box-container">
 
@@ -48,7 +48,7 @@ if(!isset($admin_id)){
       ?>
       <h3>$<?= $total_pendings; ?>/-</h3>
       <p>total pendings</p>
-      <a href="admin_orders.php" class="btn">see orders</a>
+      <a href="admin_orders.php" class="btn">Ver ordenes</a>
       </div>
 
       <div class="box">

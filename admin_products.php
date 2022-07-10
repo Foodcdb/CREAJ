@@ -102,7 +102,7 @@ if(isset($_GET['delete'])){
          <select name="category" class="box" required>
             <option value="" selected disabled>Seleccionar categoria</option>
                <option value="Hamburguesas">Hamburguesas</option>
-               <option value="pizzas">pizza</option>
+               <option value="pizzas">Pizzas</option>
                <option value="Pollo">Pollo</option>
                <option value="Bebidas">Bebidas</option>
          </select>
@@ -112,15 +112,15 @@ if(isset($_GET['delete'])){
          <input type="file" name="image" required class="box" accept="image/jpg, image/jpeg, image/png">
          </div>
       </div>
-      <textarea name="details" class="box" required placeholder="enter product details" cols="30" rows="10"></textarea>
-      <input type="submit" class="btn" value="add product" name="add_product">
+      <textarea name="details" class="box" required placeholder="Detalles del producto" cols="30" rows="10"></textarea>
+      <input type="submit" class="btn" value="Agregar producto" name="add_product">
    </form>
 
 </section>
 
 <section class="show-products">
 
-   <h1 class="title">products added</h1>
+   <h1 class="title">Productos agregados</h1>
 
    <div class="box-container">
 
@@ -137,8 +137,8 @@ if(isset($_GET['delete'])){
       <div class="cat"><?= $fetch_products['category']; ?></div>
       <div class="details"><?= $fetch_products['details']; ?></div>
       <div class="flex-btn">
-         <a href="admin_update_product.php?update=<?= $fetch_products['id']; ?>" class="option-btn">update</a>
-         <a href="admin_products.php?delete=<?= $fetch_products['id']; ?>" class="delete-btn" onclick="return confirm('delete this product?');">delete</a>
+         <a href="admin_update_product.php?update=<?= $fetch_products['id']; ?>" class="option-btn">Actualizar</a>
+         <a href="admin_products.php?delete=<?= $fetch_products['id']; ?>" class="delete-btn" onclick="return confirm('¿Borrar este producto?');">Borrar</a>
       </div>
    </div>
    <?php

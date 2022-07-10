@@ -64,7 +64,7 @@ if(isset($_POST['order'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>checkout</title>
+   <title>Verificar</title>
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -92,25 +92,25 @@ if(isset($_POST['order'])){
    <?php
     }
    }else{
-      echo '<p class="empty">your cart is empty!</p>';
+      echo '<p class="empty">Tu carrito esta vacio¡</p>';
    }
    ?>
-   <div class="grand-total">grand total : <span>$<?= $cart_grand_total; ?>/-</span></div>
+   <div class="grand-total">Total Final : <span>$<?= $cart_grand_total; ?>/-</span></div>
 </section>
 
 <section class="checkout-orders">
 
    <form action="" method="POST">
 
-      <h3>place your order</h3>
+      <h3>Haz tu pedido</h3>
 
       <div class="flex">
          <div class="inputBox">
-            <span>your name :</span>
+            <span>Tu nombre :</span>
             <input type="text" name="name" placeholder="enter your name" class="box" required>
          </div>
          <div class="inputBox">
-            <span>your number :</span>
+            <span>Tu numero :</span>
             <input type="number" name="number" placeholder="enter your number" class="box" required>
          </div>
          <div class="inputBox">
