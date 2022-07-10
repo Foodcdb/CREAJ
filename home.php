@@ -101,8 +101,8 @@ if(isset($_POST['add_to_cart'])){
 
       <div class="content">
          <span>Buena comida, buen humor.</span>
-         <h3>Productos para aprender a comer sano</h3>
-         <p>Prueba nuestros ricos y deliciosos productos de calidad.</p>
+         <h3>Reino de la Comida</h3>
+         <p>¡Cualquier día es perfecto para darte un gusto!</p>
          <a href="about.php" class="btn">Sobre Nosotros</a>
       </div>
 

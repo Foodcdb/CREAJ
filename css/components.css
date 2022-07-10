@@ -152,7 +152,6 @@ section{
    font-size: 2rem;
    text-align: center;
    box-shadow: var(--box-shadow);
-   text-transform: capitalize;
 }
 
 @keyframes fadeIn {

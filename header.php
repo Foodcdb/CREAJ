@@ -22,8 +22,8 @@ if(isset($message)){
       <nav class="navbar">
          <a href="home.php">Inicio</a>
          <a href="shop.php">Tienda</a>
-         <a href="orders.php">Ordernar</a>
-         <a href="about.php">Aserca</a>
+         <a href="orders.php">Ordenar</a>
+         <a href="about.php">Acerca</a>
          <a href="contact.php">Contacto</a>
       </nav>
 
@@ -50,11 +50,7 @@ if(isset($message)){
          <img src="uploaded_img/<?= $fetch_profile['image']; ?>" alt="">
          <p><?= $fetch_profile['name']; ?></p>
          <a href="user_profile_update.php" class="btn">Actualizar Perfil</a>
-         <a href="logout.php" class="delete-btn">Cerrar session</a>
-         <div class="flex-btn">
-            <a href="login.php" class="option-btn">Iniciar session</a>
-            <a href="register.php" class="option-btn">registrarse</a>
-         </div>
+         <a href="logout.php" class="delete-btn">Cerrar sesión</a>
       </div>
 
    </div>

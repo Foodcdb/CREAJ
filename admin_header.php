@@ -17,14 +17,14 @@ if(isset($message)){
 
    <div class="flex">
 
-      <a href="admin_page.php" class="logo">Admin<span>Panel</span></a>
+      <a href="admin_page.php" class="logo">Administrador</a>
 
       <nav class="navbar">
-         <a href="admin_page.php">home</a>
-         <a href="admin_products.php">products</a>
-         <a href="admin_orders.php">orders</a>
-         <a href="admin_users.php">users</a>
-         <a href="admin_contacts.php">messages</a>
+         <a href="admin_page.php">Inicio</a>
+         <a href="admin_products.php">Productos</a>
+         <a href="admin_orders.php">Ordenes</a>
+         <a href="admin_users.php">Usuario</a>
+         <a href="admin_contacts.php">Mensajes</a>
       </nav>
 
       <div class="icons">
@@ -40,12 +40,8 @@ if(isset($message)){
          ?>
          <img src="uploaded_img/<?= $fetch_profile['image']; ?>" alt="">
          <p><?= $fetch_profile['name']; ?></p>
-         <a href="admin_update_profile.php" class="btn">update profile</a>
-         <a href="logout.php" class="delete-btn">logout</a>
-         <div class="flex-btn">
-            <a href="login.php" class="option-btn">login</a>
-            <a href="register.php" class="option-btn">register</a>
-         </div>
+         <a href="admin_update_profile.php" class="btn">Actualizar perfil</a>
+         <a href="logout.php" class="delete-btn">Cerrar Sesión</a>
       </div>
 
    </div>
