@@ -90,6 +90,8 @@ if(isset($_POST['add_to_cart'])){
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
 
+
+
 </head>
 <body>
    
@@ -104,11 +106,25 @@ if(isset($_POST['add_to_cart'])){
          <h3>Reino de la Comida</h3>
          <p>¡Cualquier día es perfecto para darte un gusto!</p>
          <a href="about.php" class="btn">Sobre Nosotros</a>
+
+         <section>
+          <button  id="open">
+            RSE-Ecologia
+          </button>
+       
+         </section>
       </div>
-
    </section>
-
 </div>
+<div class="modal_container" id="modal_container" >
+             <div class="modal">
+               <img class="imagen" src="images/ma.jpg" alt="medio ambiente">
+               <br>
+               <p class="letra">Cuidemos el medio hambiente</p>
+               <button id="close">cerrar</button>
+            </div>
+</div>
+
 
 <section class="home-category">
 

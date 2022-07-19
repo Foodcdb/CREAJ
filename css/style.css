@@ -759,5 +759,54 @@
    .wishlist .box-container{
       grid-template-columns: 1fr;
    }
-
 }
+ 
+.modal_container{
+   display: flex;
+   background-color: rgba(0, 0, 0, 0.3);
+   align-items: center;
+   justify-content: center;
+   position: fixed;
+   opacity: 0;
+   pointer-events: none;
+   top: 0%;
+   left: 0%;
+   right: 3%;
+   height: 100vh;
+   width: 155rem;
+   
+}
+
+.show{
+   pointer-events: auto;
+   opacity: 1;
+}
+
+button{
+background-color: #293462;
+border-radius: 5px;
+font-size: 20px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+color: white;
+padding: 10px 25px;
+}
+
+.imagen{
+   width: 30%;
+   height: 90%;
+}
+
+.modal{
+   background-color: white;
+   width: 600px;
+   max-width: 100%;
+   padding: 30px 50px;
+   border-radius: 5px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+   text-align: center;
+   
+   font-size: 30px;
+}
+
+
+
