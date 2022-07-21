@@ -78,8 +78,8 @@ if(isset($message)){
 
    <form action="" method="POST">
       <h3>Inicia sesión</h3>
-      <input type="email" name="email" class="box" placeholder="Ingresa tu correo" required>
-      <input type="password" name="pass" class="box" placeholder="Ingresa tu contraseña" required>
+      <input type="email" name="email" class="box" placeholder="Ingresa tu correo" >
+      <input type="password" name="pass" class="box" placeholder="Ingresa tu contraseña">
       <input type="submit" value="iniciar sesión" class="btn" name="submit">
       <p>¿No tienes una cuenta?<a href="register.php">Regristrate ahora</a></p>
    </form>

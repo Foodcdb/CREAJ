@@ -9,11 +9,10 @@ if(isset($_POST['submit'])){
    $name = filter_var($name, FILTER_SANITIZE_STRING);
    $email = $_POST['email'];
    $email = filter_var($email, FILTER_SANITIZE_STRING);
-   $pass = md5($_POST['pass']);
+   $pass =$_POST['pass'];
    $pass = filter_var($pass, FILTER_SANITIZE_STRING);
-   $cpass = md5($_POST['cpass']);
+   $cpass =$_POST['cpass'];
    $cpass = filter_var($cpass, FILTER_SANITIZE_STRING);
-   $campos= array();
 
  
 
@@ -39,21 +38,19 @@ if(isset($_POST['submit'])){
    elseif($select->rowCount() > 0){
       $message[] = '¡El correo electrónico del usuario ya existe!';
    }
-   if($pass=="" || $pass < 6){
+   if($pass=="" || strlen($pass) < 6){
       $message[]=("El campo contraseña no puede estar vacio, ni tener menos de 6 caracteres");
-   }
-   else{
+      
+   }else{
     
       if($pass != $cpass){
          $message[] = '¡Confirmar contraseña no coincide!';
-      
-      if($image == ""){
-         $message[]='Coloque una imagen para continuar';
+       
       }
+      else{
          
-      }else{
          $insert = $conn->prepare("INSERT INTO `users`(name, email, password, image) VALUES(?,?,?,?)");
-         $insert->execute([$name, $email, $pass, $image]);
+         $insert->execute([$name, $email, md5($pass), $image]);
 
          $sql = "SELECT * FROM `users` WHERE email = ? ";
          $stmt = $conn->prepare($sql);
@@ -62,11 +59,15 @@ if(isset($_POST['submit'])){
          $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
          if($insert){
+            if($image == ""){
+               $message[]='Coloque una imagen para continuar';
+            }
             if($image_size > 2000000){
                $message[] = 'El tamaño de la imagen es demasiado grande';
-            }else{
+            }
+            else{
                move_uploaded_file($image_tmp_name, $image_folder);
-               $message[] = 'registered successfully!';
+               $message[] = 'registro exitosamente!';
                session_start();
 
                $_SESSION['user_id'] = $row['id'];
@@ -121,7 +122,7 @@ if(isset($message)){
       <input type="email" name="email" class="box" placeholder="Ingresa tu correo">
       <input type="password" name="pass" class="box" placeholder="Ingresa tu contraseña">
       <input type="password" name="cpass" class="box" placeholder="confirma tu contraseña">
-      <input type="file" name="image" class="box"  accept="image/jpg, image/jpeg, image/png">
+      <input type="file" name="image" class="box" require accept="image/jpg, image/jpeg, image/png">
       <input type="submit" value="registrase ahora" class="btn" name="submit">
       <p>¿Ya tienes una cuenta? <a href="login.php">Inicia sesión</a></p>
    </form>

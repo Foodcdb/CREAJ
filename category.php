@@ -56,7 +56,7 @@ if(isset($_POST['add_to_cart'])){
    $check_cart_numbers->execute([$p_name, $user_id]);
 
    if($check_cart_numbers->rowCount() > 0){
-      $message[] = 'already added to cart!';
+      $message[] = 'Agregado al carrito exitosamente';
    }else{
 
       $check_wishlist_numbers = $conn->prepare("SELECT * FROM `wishlist` WHERE name = ? AND user_id = ?");

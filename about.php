@@ -10,6 +10,9 @@ if(!isset($user_id)){
    header('location:login.php');
 }
 
+// Mati estuvo aquí :P - 21/7
+
+
 ?>
 
 <!DOCTYPE html>
