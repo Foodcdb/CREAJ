@@ -30,3 +30,12 @@ close.addEventListener('click',() =>{
    modal_container.classList.remove('show')
 });
 
+
+//Validacion para el formulario//
+
+
+
+
+
+
+

@@ -43,15 +43,15 @@ if(isset($_POST['order'])){
    $order_query->execute([$name, $number, $email, $method, $address, $total_products, $cart_total]);
 
    if($cart_total == 0){
-      $message[] = 'your cart is empty';
+      $message[] = 'tu carrito esta vacio';
    }elseif($order_query->rowCount() > 0){
-      $message[] = 'order placed already!';
+      $message[] = '¡pedido realizado con éxito!';
    }else{
       $insert_order = $conn->prepare("INSERT INTO `orders`(user_id, name, number, email, method, address, total_products, total_price, placed_on) VALUES(?,?,?,?,?,?,?,?,?)");
       $insert_order->execute([$user_id, $name, $number, $email, $method, $address, $total_products, $cart_total, $placed_on]);
       $delete_cart = $conn->prepare("DELETE FROM `cart` WHERE user_id = ?");
       $delete_cart->execute([$user_id]);
-      $message[] = 'order placed successfully!';
+      $message[] = '¡pedido realizado con éxito!';
    }
 
 }
@@ -114,7 +114,7 @@ if(isset($_POST['order'])){
             <input type="number" name="number" placeholder="enter your number" class="box" required>
          </div>
          <div class="inputBox">
-            <span>your email :</span>
+            <span>Tu correo :</span>
             <input type="email" name="email" placeholder="enter your email" class="box" required>
          </div>
          <div class="inputBox">
