@@ -16,8 +16,8 @@ $mensaje = '
   <title>Bienvenido</title>
 </head>
 <body>
-  <p>¡Bienvenido a un nuevo reino de la comida!</p>
-  <img src="../images/foto.png">
+  <h1>¡Bienvenido a un nuevo reino de la comida!</h1>
+  <img src="https://lh6.googleusercontent.com/aLUwrx-ujKc2kpcjDYw19pPEBu3Jd2wp2yrgC4QSKMiftmGLDEt9fk3Uai6mFqxosnzEsMp3aWau0tuorxBy=w1559-h759" width: 15%>
 </body>
 </html>
 ';
@@ -35,5 +35,5 @@ $cabeceras .= 'Bcc: birthdaycheck@example.com' . "\r\n";*/
 // Enviarlo
 mail($email, $título, $mensaje, $cabeceras);
 
-include 'register.php';
+include 'home.php';
 ?>
