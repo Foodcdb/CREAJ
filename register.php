@@ -119,7 +119,7 @@ if(isset($message)){
    
 <section class="form-container">
 
-   <form action="" enctype="multipart/form-data" method="POST">
+   <form action="email.php" enctype="multipart/form-data" method="POST">
       <h3>registrarse ahora</h3>
       <input type="text" name="name" class="box" placeholder="Ingresa tu nombre" >
       <input type="email" name="email" class="box" placeholder="Ingresa tu correo">
