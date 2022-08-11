@@ -135,7 +135,7 @@ if(isset($_POST['order'])){
             <input type="text" name="street" placeholder="e.g. street name" class="box" required>
          </div>
          <div class="inputBox">
-            <span>city :</span>
+            <span>Ciudad</span>
             <input type="text" name="city" placeholder="e.g. mumbai" class="box" required>
          </div>
          <div class="inputBox">
