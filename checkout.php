@@ -95,7 +95,7 @@ if(isset($_POST['order'])){
       echo '<p class="empty">Tu carrito esta vacio¡</p>';
    }
    ?>
-   <div class="grand-total">Total Final : <span>$<?= $cart_grand_total; ?>/-</span></div>
+   <div class="grand-total">Total a pagar : <span>$<?= $cart_grand_total; ?>/-</span></div>
 </section>
 
 <section class="checkout-orders">
@@ -107,52 +107,52 @@ if(isset($_POST['order'])){
       <div class="flex">
          <div class="inputBox">
             <span>Tu nombre :</span>
-            <input type="text" name="name" placeholder="enter your name" class="box" required>
+            <input type="text" name="name" placeholder="Ingrese su nombre" class="box" required>
          </div>
          <div class="inputBox">
             <span>Tu numero :</span>
-            <input type="number" name="number" placeholder="enter your number" class="box" required>
+            <input type="number" name="number" placeholder="Ingrese su numero de telefono" class="box" required>
          </div>
          <div class="inputBox">
             <span>Tu correo :</span>
-            <input type="email" name="email" placeholder="enter your email" class="box" required>
+            <input type="email" name="email" placeholder="Ingrese su correo electronico" class="box" required>
          </div>
          <div class="inputBox">
-            <span>payment method :</span>
+            <span>Metodo de pago :</span>
             <select name="method" class="box" required>
-               <option value="cash on delivery">cash on delivery</option>
-               <option value="credit card">credit card</option>
-               <option value="paytm">paytm</option>
+               <option value="cash on delivery">Dinero en efectivo</option>
+               <option value="credit card">Tarjeta de credito</option>
+               <option value="paytm">Criptomoneda</option>
                <option value="paypal">paypal</option>
             </select>
          </div>
          <div class="inputBox">
-            <span>address line 01 :</span>
-            <input type="text" name="flat" placeholder="e.g. flat number" class="box" required>
+            <span>línea de dirección 01 :</span>
+            <input type="text" name="flat" placeholder="e.j.Nuero de calle" class="box" required>
          </div>
          <div class="inputBox">
-            <span>address line 02 :</span>
-            <input type="text" name="street" placeholder="e.g. street name" class="box" required>
+            <span>línea de dirección 02:</span>
+            <input type="text" name="street" placeholder="e.j. nombre de calle" class="box" required>
          </div>
          <div class="inputBox">
             <span>Ciudad</span>
-            <input type="text" name="city" placeholder="e.g. mumbai" class="box" required>
+            <input type="text" name="city" placeholder="e.j. mumbai" class="box" required>
          </div>
          <div class="inputBox">
-            <span>state :</span>
-            <input type="text" name="state" placeholder="e.g. maharashtra" class="box" required>
+            <span>Estado :</span>
+            <input type="text" name="state" placeholder="e.j. maharashtra" class="box" required>
          </div>
          <div class="inputBox">
-            <span>country :</span>
-            <input type="text" name="country" placeholder="e.g. India" class="box" required>
+            <span>país:</span>
+            <input type="text" name="country" placeholder="e.j. India" class="box" required>
          </div>
          <div class="inputBox">
-            <span>pin code :</span>
-            <input type="number" min="0" name="pin_code" placeholder="e.g. 123456" class="box" required>
+            <span>Código PIN:</span>
+            <input type="number" min="0" name="pin_code" placeholder="e.j. 123456" class="box" required>
          </div>
       </div>
 
-      <input type="submit" name="order" class="btn <?= ($cart_grand_total > 1)?'':'disabled'; ?>" value="place order">
+      <input type="submit" name="order" class="btn <?= ($cart_grand_total > 1)?'':'disabled'; ?>" value="ordenar">
 
    </form>
 
