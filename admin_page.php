@@ -86,29 +86,7 @@ if(!isset($admin_id)){
       <p>Productos agregados</p>
       <a href="admin_products.php" class="btn">Ver productos</a>
       </div>
-
-      <div class="box">
-      <?php
-         $select_users = $conn->prepare("SELECT * FROM `users` WHERE user_type = ?");
-         $select_users->execute(['user']);
-         $number_of_users = $select_users->rowCount();
-      ?>
-      <h3><?= $number_of_users; ?></h3>
-      <p>Total de usuarios</p>
-      <a href="admin_users.php" class="btn">Ver usuarios</a>
-      </div>
-
-      <div class="box">
-      <?php
-         $select_admins = $conn->prepare("SELECT * FROM `users` WHERE user_type = ?");
-         $select_admins->execute(['admin']);
-         $number_of_admins = $select_admins->rowCount();
-      ?>
-      <h3><?= $number_of_admins; ?></h3>
-      <p>Administradores</p>
-      <a href="admin_users.php" class="btn">Ver usuarios</a>
-      </div>
-
+      <br>
       <div class="box">
       <?php
          $select_accounts = $conn->prepare("SELECT * FROM `users`");
