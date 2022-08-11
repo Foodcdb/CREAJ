@@ -38,8 +38,8 @@ if(isset($_POST['submit'])){
    elseif($select->rowCount() > 0){
       $message[] = '¡El correo electrónico del usuario ya existe!';
    }
-   if($pass=="" || strlen($pass) < 6){
-      $message[]=("El campo contraseña no puede estar vacio, ni tener menos de 6 caracteres");
+   if($pass=="" || strlen($pass) < 7){
+      $message[]=("El campo contraseña no puede estar vacio, ni tener menos de 8 caracteres");
       
    }else{
     
