@@ -45,7 +45,7 @@ if(isset($_POST['send'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>contact</title>
+   <title>Contacto</title>
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -60,13 +60,13 @@ if(isset($_POST['send'])){
 
 <section class="contact">
 
-   <h1 class="title">get in touch</h1>
+   <h1 class="title">Contactanos</h1>
 
    <form action="" method="POST">
       <input type="text" name="name" class="box" required placeholder="Ingresa tu nombre">
       <input type="email" name="email" class="box" required placeholder="Ingresa tu correo">
       <input type="number" name="number" min="0" class="box" required placeholder="Ingresa tu numero">
-      <textarea name="msg" class="box" required placeholder="enter your message" cols="30" rows="10"></textarea>
+      <textarea name="msg" class="box" required placeholder="Ingresar mensaje" cols="30" rows="10"></textarea>
       <input type="submit" value="Enviar mensaje" class="btn" name="send">
    </form>
 
