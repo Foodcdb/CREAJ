@@ -39,17 +39,17 @@ if(!isset($user_id)){
    <div class="row">
 
       <div class="box">
-         <img src="images/about-img-1.png" alt="">
+         <img src="images/about-img-1.jpg" high="617" width="570">
          <h3>¿Por qué elegirnos?</h3>
-         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, a quod, quis alias eius dignissimos pariatur laborum dolorem ad ullam iure, consequatur autem animi illo odit! Atque quia minima voluptatibus.</p>
-         <a href="contact.php" class="btn">contact us</a>
+         <p>Somos una página la cual trata de saciar tu hambre, para que puedas evitar la aglomeración en este periodo de pandemia, facilitando la entrega del  producto y las reservaciones.</p>
+         <a href="contact.php" class="btn">Contactate con nosotros</a>
       </div>
 
       <div class="box">
-         <img src="images/about-img-2.png" alt="">
+         <img src="images/about-img-2.jpg" high="534" width="500">
          <h3>¿Qué proporcionamos?</h3>
-         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, a quod, quis alias eius dignissimos pariatur laborum dolorem ad ullam iure, consequatur autem animi illo odit! Atque quia minima voluptatibus.</p>
-         <a href="shop.php" class="btn">our shop</a>
+         <p>Ser una página web confiable la cual satisface los pedidos de los usuarios, atendiendo de la mejor manera de forma amigable y con amabilidad.</p>
+         <a href="shop.php" class="btn">Nuestra tienda</a>
       </div>
 
    </div>
