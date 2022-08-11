@@ -32,11 +32,11 @@ if(isset($_POST['update_product'])){
    $update_product = $conn->prepare("UPDATE `products` SET name = ?, category = ?, details = ?, price = ? WHERE id = ?");
    $update_product->execute([$name, $category, $details, $price, $pid]);
 
-   $message[] = 'product updated successfully!';
+   $message[] = 'Producto actualizado con éxito!';
 
    if(!empty($image)){
       if($image_size > 2000000){
-         $message[] = 'image size is too large!';
+         $message[] = 'El tamaño de la imagen es demasiado grande!';
       }else{
 
          $update_image = $conn->prepare("UPDATE `products` SET image = ? WHERE id = ?");
@@ -45,7 +45,7 @@ if(isset($_POST['update_product'])){
          if($update_image){
             move_uploaded_file($image_tmp_name, $image_folder);
             unlink('uploaded_img/'.$old_image);
-            $message[] = 'image updated successfully!';
+            $message[] = 'Imagen actulizada con exito!';
          }
       }
    }
@@ -60,7 +60,7 @@ if(isset($_POST['update_product'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>update products</title>
+   <title>Actualizar producto</title>
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -75,7 +75,7 @@ if(isset($_POST['update_product'])){
 
 <section class="update-product">
 
-   <h1 class="title">update product</h1>   
+   <h1 class="title">Actualizar Producto</h1>   
 
    <?php
       $update_id = $_GET['update'];
@@ -100,8 +100,8 @@ if(isset($_POST['update_product'])){
       <textarea name="details" required placeholder="enter product details" class="box" cols="30" rows="10"><?= $fetch_products['details']; ?></textarea>
       <input type="file" name="image" class="box" accept="image/jpg, image/jpeg, image/png">
       <div class="flex-btn">
-         <input type="submit" class="btn" value="update product" name="update_product">
-         <a href="admin_products.php" class="option-btn">go back</a>
+         <input type="submit" class="btn" value="Actualizar producto" name="update_product">
+         <a href="admin_products.php" class="option-btn">Regresar</a>
       </div>
    </form>
    <?php

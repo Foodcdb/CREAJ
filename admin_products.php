@@ -31,7 +31,7 @@ if(isset($_POST['add_product'])){
    $select_products->execute([$name]);
 
    if($select_products->rowCount() > 0){
-      $message[] = 'product name already exist!';
+      $message[] = 'Nombre del producto existente!';
    }else{
 
       $insert_products = $conn->prepare("INSERT INTO `products`(name, category, details, price, image) VALUES(?,?,?,?,?)");
@@ -39,10 +39,10 @@ if(isset($_POST['add_product'])){
 
       if($insert_products){
          if($image_size > 2000000){
-            $message[] = 'image size is too large!';
+            $message[] = 'El tamaño de la imagen es demasiado grande!';
          }else{
             move_uploaded_file($image_tmp_name, $image_folder);
-            $message[] = 'new product added!';
+            $message[] = 'Nuevo producto agregado!';
          }
 
       }
@@ -78,7 +78,7 @@ if(isset($_GET['delete'])){
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="icon" href="images/a.png" type="icon">
-   <title>products</title>
+   <title>Productos</title>
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
