@@ -187,7 +187,7 @@ if(isset($_POST['add_to_cart'])){
       <input type="hidden" name="p_image" value="<?= $fetch_products['image']; ?>">
       <input type="number" min="1" value="1" name="p_qty" class="qty">
       <input type="submit" value="Lista de deseos" class="option-btn" name="Agregar a la lista de deseos">
-      <input type="submit" value="Agregar al carrito" class="btn" name="add_to_cart">
+      <input type="submit" value="Agregar al carrito" class="btn" name="Agregar al carrito">
    </form>
    <?php
       }
