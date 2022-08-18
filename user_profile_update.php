@@ -51,13 +51,13 @@ if(isset($_POST['update_profile'])){
 
    if(!empty($update_pass) AND !empty($new_pass) AND !empty($confirm_pass)){
       if($update_pass != $old_pass){
-         $message[] = 'old password not matched!';
+         $message[] = 'contraseña anterior no coincide!';
       }elseif($new_pass != $confirm_pass){
-         $message[] = 'confirm password not matched!';
+         $message[] = 'contraseña no coincide!';
       }else{
          $update_pass_query = $conn->prepare("UPDATE `users` SET password = ? WHERE id = ?");
          $update_pass_query->execute([$confirm_pass, $user_id]);
-         $message[] = 'password updated successfully!';
+         $message[] = 'Contraseña actualizada exitosamente!';
       }
    }
 
@@ -92,9 +92,9 @@ if(isset($_POST['update_profile'])){
       <div class="flex">
          <div class="inputBox">
             <span>Usuario :</span>
-            <input type="text" name="name" value="<?= $fetch_profile['name']; ?>" placeholder="update username" required class="box">
+            <input type="text" name="name" value="<?= $fetch_profile['name']; ?>" placeholder="Actualizar nombre de usuario" required class="box">
             <span>Email :</span>
-            <input type="email" name="email" value="<?= $fetch_profile['email']; ?>" placeholder="update email" required class="box">
+            <input type="email" name="email" value="<?= $fetch_profile['email']; ?>" placeholder="Actualizar email" required class="box">
             <span>Elige una imagen :</span>
             <input type="file" name="image" accept="image/jpg, image/jpeg, image/png" class="box">
             <input type="hidden" name="old_image" value="<?= $fetch_profile['image']; ?>">
@@ -102,16 +102,16 @@ if(isset($_POST['update_profile'])){
          <div class="inputBox">
             <input type="hidden" name="old_pass" value="<?= $fetch_profile['password']; ?>">
             <span>Contraseña actual :</span>
-            <input type="password" name="update_pass" placeholder="enter previous password" class="box">
+            <input type="password" name="update_pass" placeholder="Ingrese la contraseña anterior" class="box">
             <span>Nueva Contraseña :</span>
-            <input type="password" name="new_pass" placeholder="enter new password" class="box">
+            <input type="password" name="new_pass" placeholder="Ingrese nueva contraseña" class="box">
             <span>Confirmar Contraseña :</span>
-            <input type="password" name="confirm_pass" placeholder="confirm new password" class="box">
+            <input type="password" name="confirm_pass" placeholder="Confirmar nueva contraseña" class="box">
          </div>
       </div>
       <div class="flex-btn">
-         <input type="submit" class="btn" value="update profile" name="update_profile">
-         <a href="home.php" class="option-btn">go back</a>
+         <input type="submit" class="btn" value="Actualizar perfil" name="update_profile">
+         <a href="home.php" class="option-btn">Regresar</a>
       </div>
    </form>
 

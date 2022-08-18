@@ -67,7 +67,7 @@ if(isset($_POST['update_qty'])){
          while($fetch_cart = $select_cart->fetch(PDO::FETCH_ASSOC)){ 
    ?>
    <form action="" method="POST" class="box">
-      <a href="cart.php?delete=<?= $fetch_cart['id']; ?>" class="fas fa-times" onclick="return confirm('delete this from cart?');"></a>
+      <a href="cart.php?delete=<?= $fetch_cart['id']; ?>" class="fas fa-times" onclick="return confirm('borrar de este carrito?');"></a>
       <a href="view_page.php?pid=<?= $fetch_cart['pid']; ?>" class="fas fa-eye"></a>
       <img src="uploaded_img/<?= $fetch_cart['image']; ?>" alt="">
       <div class="name"><?= $fetch_cart['name']; ?></div>
@@ -75,7 +75,7 @@ if(isset($_POST['update_qty'])){
       <input type="hidden" name="cart_id" value="<?= $fetch_cart['id']; ?>">
       <div class="flex-btn">
          <input type="number" min="1" value="<?= $fetch_cart['quantity']; ?>" class="qty" name="p_qty">
-         <input type="submit" value="update" name="update_qty" class="option-btn">
+         <input type="submit" value="actualizar" name="update_qty" class="option-btn">
       </div>
       <div class="sub-total"> sub total : <span>$<?= $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?>/-</span> </div>
    </form>
@@ -83,7 +83,7 @@ if(isset($_POST['update_qty'])){
       $grand_total += $sub_total;
       }
    }else{
-      echo '<p class="empty">your cart is empty</p>';
+      echo '<p class="empty">Tu carrito esta vacio</p>';
    }
    ?>
    </div>
@@ -91,8 +91,8 @@ if(isset($_POST['update_qty'])){
    <div class="cart-total">
       <p>grand total : <span>$<?= $grand_total; ?>/-</span></p>
       <a href="shop.php" class="option-btn">continuar comprando</a>
-      <a href="cart.php?delete_all" class="delete-btn <?= ($grand_total > 1)?'':'disabled'; ?>">delete all</a>
-      <a href="checkout.php" class="btn <?= ($grand_total > 1)?'':'disabled'; ?>">proceed to checkout</a>
+      <a href="cart.php?delete_all" class="delete-btn <?= ($grand_total > 1)?'':'disabled'; ?>">Eliminar todo</a>
+      <a href="checkout.php" class="btn <?= ($grand_total > 1)?'':'disabled'; ?>">continuar a pagar</a>
    </div>
 
 </section>

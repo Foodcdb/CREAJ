@@ -106,7 +106,7 @@ if(isset($_POST['add_to_cart'])){
 
 <section class="products">
 
-   <h1 class="title">Agregar product</h1>
+   <h1 class="title">Agregar producto</h1>
 
    <div class="box-container">
 
