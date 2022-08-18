@@ -33,6 +33,9 @@ close.addEventListener('click',() =>{
 
 //Validacion para el formulario//
 
+//Degradado//
+
+
 
 
 

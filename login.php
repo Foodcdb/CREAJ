@@ -59,6 +59,7 @@ if(isset($_POST['submit'])){
 </head>
 <body>
 
+
 <?php
 
 if(isset($message)){
@@ -81,12 +82,11 @@ if(isset($message)){
       <input type="email" name="email" class="box" placeholder="Ingresa tu correo" >
       <input type="password" name="pass" class="box" placeholder="Ingresa tu contraseña">
       <input type="submit" value="iniciar sesión" class="btn" name="submit">
-      <p>¿No tienes una cuenta?<a href="register.php">Regristrate ahora</a></p>
+      <p>¿No tienes una cuenta?
+      <a href="register.php">Regristrate ahora</a></p>
    </form>
 
 
 </section>
-
-
 </body>
 </html>
