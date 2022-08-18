@@ -171,7 +171,7 @@ if(isset($_POST['add_to_cart'])){
    <div class="box-container">
 
    <?php
-      $select_products = $conn->prepare("SELECT * FROM `products` LIMIT 6");
+      $select_products = $conn->prepare("SELECT * FROM `products`");
       $select_products->execute();
       if($select_products->rowCount() > 0){
          while($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)){ 
@@ -186,15 +186,16 @@ if(isset($_POST['add_to_cart'])){
       <input type="hidden" name="p_price" value="<?= $fetch_products['price']; ?>">
       <input type="hidden" name="p_image" value="<?= $fetch_products['image']; ?>">
       <input type="number" min="1" value="1" name="p_qty" class="qty">
-      <input type="submit" value="Lista de deseos" class="option-btn" name="Agregar a la lista de deseos">
-      <input type="submit" value="Agregar al carrito" class="btn" name="Agregar al carrito">
+      <input type="submit" value="Agregar lista de deseo" class="option-btn" name="add_to_wishlist">
+      <input type="submit" value="Agregar al Carrito" class="btn" name="add_to_cart">
    </form>
    <?php
       }
    }else{
-      echo '<p class="empty">Sin productos agregados aun</p>';
+      echo '<p class="empty">no products added yet!</p>';
    }
-   ?> 
+   ?>
+
 
    </div>
 
