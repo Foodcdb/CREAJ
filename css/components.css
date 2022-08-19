@@ -77,7 +77,6 @@ section{
    font-size: 2rem;
    padding:1.3rem 3rem;
    text-transform: capitalize;
-   cursor: pointer;
    text-align: center;
 }
 
@@ -161,6 +160,11 @@ section{
    0%{
       transform: translateY(1rem);
    }
+}
+
+.login-wp{
+   background-image: url(../images/prueba.jpg);
+   background-position: center;
 }
 
 .form-container{

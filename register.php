@@ -116,22 +116,23 @@ if(isset($message)){
 }
 
 ?>
-   
-<section class="form-container">
 
-   <form action="email.php" enctype="multipart/form-data" method="POST">
-      <h3>registrarse ahora</h3>
-      <input type="text" name="name" class="box" placeholder="Ingresa tu nombre" >
-      <input type="email" name="email" class="box" placeholder="Ingresa tu correo">
-      <input type="password" name="pass" class="box" placeholder="Ingresa tu contraseña">
-      <input type="password" name="cpass" class="box" placeholder="confirma tu contraseña">
-      <input type="file" name="image" class="box" require accept="image/jpg, image/jpeg, image/png">
-      <input type="submit" value="registrase ahora" class="btn" name="submit">
-      <p>¿Ya tienes una cuenta? <a href="login.php">Inicia sesión</a></p>
-   </form>
+<div class="login-wp">
+   <section class="form-container">
 
-</section>
+      <form action="email.php" enctype="multipart/form-data" method="POST">
+       <h3>registrarse ahora</h3>
+       <input type="text" name="name" class="box" placeholder="Ingresa tu nombre" >
+       <input type="email" name="email" class="box" placeholder="Ingresa tu correo">
+       <input type="password" name="pass" class="box" placeholder="Ingresa tu contraseña">
+       <input type="password" name="cpass" class="box" placeholder="confirma tu contraseña">
+       <input type="file" name="image" class="box" require accept="image/jpg, image/jpeg, image/png">
+       <input type="submit" value="registrase ahora" class="btn" name="submit">
+        <p>¿Ya tienes una cuenta? <a href="login.php">Inicia sesión</a></p>
+      </form>
 
+   </section>
+<div>
 
 </body>
 </html>
