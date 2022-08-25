@@ -82,7 +82,7 @@ if(isset($_POST['add_to_cart'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>search page</title>
+   <title>Busqueda de pagina</title>
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -133,13 +133,22 @@ if(isset($_POST['add_to_cart'])){
       <input type="hidden" name="p_price" value="<?= $fetch_products['price']; ?>">
       <input type="hidden" name="p_image" value="<?= $fetch_products['image']; ?>">
       <input type="number" min="1" value="1" name="p_qty" class="qty">
+<<<<<<< HEAD
       <input type="submit" value="Agregar a lista de deseos" class="option-btn" name="add_to_wishlist">
       <input type="submit" value="Agregar al carrito" class="btn" name="add_to_cart">
+=======
+      <input type="submit" value="añadir a la lista de deseos" class="option-btn" name="add_to_wishlist">
+      <input type="submit" value="añadir al carrito" class="btn" name="add_to_cart">
+>>>>>>> 38cd5d4c421a806f89147876bcc0c581ddc6a752
    </form>
    <?php
          }
       }else{
+<<<<<<< HEAD
          echo '<p class="empty">Sin resultados!</p>';
+=======
+         echo '<p class="empty">no hay resultados!</p>';
+>>>>>>> 38cd5d4c421a806f89147876bcc0c581ddc6a752
       }
       
    };
