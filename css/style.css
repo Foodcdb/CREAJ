@@ -175,7 +175,11 @@
    top:1rem; left:1rem;
    padding:1rem;
    border-radius: .5rem;
+<<<<<<< HEAD
    background-color: var(--orange);
+=======
+   background-color: var(--white);
+>>>>>>> 1f526c6b84e74b0ab71e17b81447b1ec75a1a36d
    font-size: 1.8rem;
    color:var(--white);
 }
