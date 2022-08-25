@@ -97,7 +97,7 @@
    padding:1rem;
    font-size: 2rem;
    color:var(--white);
-   background-color: var(--red);
+   background-color: var(--yellow);
    border-radius: .5rem;
 }
 
@@ -114,7 +114,7 @@
 
 .show-products .box-container .box .cat{
    font-size: 1.8rem;
-   color:var(--green);
+   color:var(--blue);
 }
 
 .show-products .box-container .box .details{
@@ -177,7 +177,7 @@
 }
 
 .placed-orders .box-container .box p span{
-   color:var(--green);
+   color:var(--blue);
 }
 
 .placed-orders .box-container .box .drop-down{
@@ -223,7 +223,7 @@
 }
 
 .user-accounts .box-container .box p span{
-   color:var(--green);
+   color:var(--blue);
 }
 
 .messages .box-container{
@@ -250,7 +250,7 @@
 }
 
 .messages .box-container .box p span{
-   color:var(--green);
+   color:var(--blue);
 }
 
 

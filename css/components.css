@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 
 :root{
-   --green:#293462;
+   --blue:#293462;
    --orange:#FF5F00;
-   --red:#EC9B3B;
+   --yellow:#EC9B3B;
    --black:#333;
+   --green:#008000;
    --light-color:#666;
    --white:rgb(255, 255, 255);
    --light-bg:#f6f6f6;
@@ -24,7 +25,7 @@
 
 
 *::selection{
-   background-color: var(--green);
+   background-color: var(--blue);
    color:var(--white);
 }
 
@@ -38,7 +39,7 @@
 }
 
 *::-webkit-scrollbar-thumb{
-   background-color: var(--green);
+   background-color: var(--blue);
 }
 
 body{
@@ -81,11 +82,11 @@ section{
 }
 
 .btn{
-   background-color: green;
+   background-color:var(--blue);
 }
 
 .delete-btn{
-   background-color: var(--red);
+   background-color: var(--yellow);
 }
 
 .option-btn{
@@ -138,7 +139,7 @@ section{
 .message i{
    font-size: 2.5rem;
    cursor: pointer;
-   color:var(--red);
+   color:var(--yellow);
 }
 
 .message i:hover{
@@ -148,7 +149,7 @@ section{
 .empty{
    padding:1.5rem;
    background: var(--white);
-   color:var(--red);
+   color:var(--yellow);
    border-radius: .5rem;
    border:var(--border);
    font-size: 2rem;
@@ -209,7 +210,7 @@ section{
 }
 
 .form-container form p a{
-   color:green;
+   color: var(--blue);
 }
 
 .form-container form p a:hover{
@@ -240,7 +241,7 @@ section{
 }  
 
 .header .flex .logo span{
-   color:var(--green);
+   color:var(--blue);
 }
 
 .header .flex .navbar a{
@@ -251,7 +252,7 @@ section{
 
 .header .flex .navbar a:hover{
    text-decoration: underline;
-   color:var(--green);
+   color:var(--blue);
 }
 
 .header .flex .icons > *{
@@ -262,7 +263,7 @@ section{
 }
 
 .header .flex .icons > *:hover{
-   color:var(--green);
+   color:var(--blue);
 }
 
 .header .flex .icons a span,
@@ -272,7 +273,7 @@ section{
 
 .header .flex .icons a:hover span,
 .header .flex .icons a:hover i{
-   color:var(--green);
+   color:var(--blue);
 }
 
 .header .flex .icons a span{
@@ -403,13 +404,13 @@ section{
 
 .footer .box-container .box a i,
 .footer .box-container .box p i{
-   color:var(--green);
+   color:var(--blue);
    padding-right: 1rem;
 }
 
 .footer .box-container .box a:hover{
    text-decoration: underline;
-   color:var(--green);
+   color:var(--blue);
 }
 
 .footer .credit{
@@ -424,7 +425,7 @@ section{
 }
 
 .footer .credit span{
-   color:var(--green);
+   color:var(--blue);
 }
 
 

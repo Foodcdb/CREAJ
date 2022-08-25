@@ -51,13 +51,13 @@ if(isset($_POST['update_profile'])){
 
    if(!empty($update_pass) AND !empty($new_pass) AND !empty($confirm_pass)){
       if($update_pass != $old_pass){
-         $message[] = 'old password not matched!';
+         $message[] = 'contraseña anterior no coincide!';
       }elseif($new_pass != $confirm_pass){
-         $message[] = 'confirm password not matched!';
+         $message[] = 'confirmar contraseña no coincide!';
       }else{
          $update_pass_query = $conn->prepare("UPDATE `users` SET password = ? WHERE id = ?");
          $update_pass_query->execute([$confirm_pass, $admin_id]);
-         $message[] = 'password updated successfully!';
+         $message[] = 'Contraseña actualizada exitosamente!';
       }
    }
 

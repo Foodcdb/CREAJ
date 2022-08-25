@@ -160,6 +160,34 @@ if(isset($_POST['add_to_cart'])){
          <a href="category.php?category=Bebidas" class="btn">Bebida</a>
       </div>
 
+      <div class="box">
+         <img src="images/sopi.jpg" alt="">
+         <h3>Sopa</h3>
+         <p>Degusta de nuestras deliciosas sopas.</p>
+         <a href="category.php?category=Sopa" class="btn">Sopa</a>
+      </div>
+
+      <div class="box">
+         <img src="images/china.jpg" alt="">
+         <h3>Comida china</h3>
+         <p>Degusta de nuestra comida china si deseas probar algo nuevo.</p>
+         <a href="category.php?category=China" class="btn">Comida china</a>
+      </div>
+
+      <div class="box">
+         <img src="images/postres.jpg" alt="">
+         <h3>Postres</h3>
+         <p>Degusta de nuestros deliciosos postres.</p>
+         <a href="category.php?category=Postres" class="btn">Postres</a>
+      </div>
+
+      <div class="box">
+         <img src="images/Pizza-1.jpg" alt="">
+         <h3>Combo</h3>
+         <p>Puedes aduirir un combo para mayor comodidad.</p>
+         <a href="category.php?category=Combo" class="btn">Combo</a>
+      </div>
+
    </div>
 
 </section>
