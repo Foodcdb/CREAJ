@@ -29,7 +29,7 @@ if(isset($_POST['update_qty'])){
    $p_qty = filter_var($p_qty, FILTER_SANITIZE_STRING);
    $update_qty = $conn->prepare("UPDATE `cart` SET quantity = ? WHERE id = ?");
    $update_qty->execute([$p_qty, $cart_id]);
-   $message[] = 'cart quantity updated';
+   $message[] = 'Cantidad del carrito ctualizada';
 }
 
 ?>

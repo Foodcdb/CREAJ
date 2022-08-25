@@ -7,15 +7,15 @@
          <a href="home.php"> <i class="fas fa-angle-right"></i>Inicio</a>
          <a href="shop.php"> <i class="fas fa-angle-right"></i>Tienda</a>
          <a href="about.php"> <i class="fas fa-angle-right"></i>Aserca de</a>
-         <a href="contact.php"> <i class="fas fa-angle-right"></i>contactanos</a>
+         <a href="contact.php"> <i class="fas fa-angle-right"></i>Contactanos</a>
       </div>
 
       <div class="box">
          <h3>links</h3>
-         <a href="cart.php"> <i class="fas fa-angle-right"></i> carrito</a>
-         <a href="wishlist.php"> <i class="fas fa-angle-right"></i> lista de deseos</a>
+         <a href="cart.php"> <i class="fas fa-angle-right"></i> Carrito</a>
+         <a href="wishlist.php"> <i class="fas fa-angle-right"></i> Lista de deseos</a>
          <a href="login.php"> <i class="fas fa-angle-right"></i> Inicio</a>
-         <a href="register.php"> <i class="fas fa-angle-right"></i> registro</a>
+         <a href="register.php"> <i class="fas fa-angle-right"></i> Registro</a>
       </div>
 
       <div class="box">
@@ -28,9 +28,9 @@
 
       <div class="box">
          <h3>Siguenos</h3>
-         <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
-         <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
-         <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+         <a href="#"> <i class="fab fa-facebook-f"></i> Facebook </a>
+         <a href="#"> <i class="fab fa-twitter"></i> Twitter </a>
+         <a href="#"> <i class="fab fa-instagram"></i> Instagram </a>
       </div>
 
    </section>
