@@ -6,7 +6,7 @@
          <h3>Links</h3>
          <a href="home.php"> <i class="fas fa-angle-right"></i>Inicio</a>
          <a href="shop.php"> <i class="fas fa-angle-right"></i>Tienda</a>
-         <a href="about.php"> <i class="fas fa-angle-right"></i>Aserca de</a>
+         <a href="about.php"> <i class="fas fa-angle-right"></i>Acerca de</a>
          <a href="contact.php"> <i class="fas fa-angle-right"></i>contactanos</a>
       </div>
 
