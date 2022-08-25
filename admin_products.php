@@ -105,6 +105,9 @@ if(isset($_GET['delete'])){
                <option value="pizzas">Pizzas</option>
                <option value="Pollo">Pollo</option>
                <option value="Bebidas">Bebidas</option>
+               <option value="Sopa">Sopas</option>
+               <option value="China">Comida China</option>
+               <option value="Postres">Postres</option>
                <option value="Combo">Combo</option>
          </select>
          </div>
