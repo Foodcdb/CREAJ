@@ -85,6 +85,10 @@ section{
    background-color:var(--blue);
 }
 
+.btn_1{
+   background-color: var(--green);
+}
+
 .delete-btn{
    background-color: var(--yellow);
 }
@@ -96,7 +100,7 @@ section{
 .btn:hover,
 .delete-btn:hover,
 .option-btn:hover{
-   background-color: var(--black);
+   background-color: grey;
 }
 
 .flex-btn{

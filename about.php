@@ -39,14 +39,14 @@ if(!isset($user_id)){
    <div class="row">
 
       <div class="box">
-         <img src="images/about-img-1.jpg" high="534" width="500">
+         <img src="images/Norman.jpg" high="500" width="400">
          <h3>¿Por qué elegirnos?</h3>
          <p>Somos una página la cual trata de saciar tu hambre, para que puedas evitar la aglomeración en este periodo de pandemia, facilitando la entrega del  producto y las reservaciones.</p>
          <a href="contact.php" class="btn">Contactate con nosotros</a>
       </div>
 
       <div class="box">
-         <img src="images/about-img-2.jpg" high="534" width="500">
+         <img src="images/services.avif" high="400" width="400">
          <h3>¿Qué proporcionamos?</h3>
          <p>Ser una página web confiable la cual satisface los pedidos de los usuarios, atendiendo de la mejor manera de forma amigable y con amabilidad.</p>
          <a href="shop.php" class="btn">Nuestra tienda</a>
