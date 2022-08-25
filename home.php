@@ -160,6 +160,13 @@ if(isset($_POST['add_to_cart'])){
          <a href="category.php?category=Bebidas" class="btn">Bebida</a>
       </div>
 
+      <div class="box">
+         <img src="images/Pizza-1.jpg" alt="">
+         <h3>Combo</h3>
+         <p>Adquiere nuestros a menores precios.</p>
+         <a href="category.php?category=Combo" class="btn">Combo</a>
+      </div>
+
    </div>
 
 </section>
