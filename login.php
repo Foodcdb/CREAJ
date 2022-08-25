@@ -82,7 +82,7 @@ if(isset($message)){
          <h3>Inicia sesión</h3>
          <input type="email" name="email" class="box" placeholder="Ingresa tu correo" >
          <input type="password" name="pass" class="box" placeholder="Ingresa tu contraseña">
-         <input type="submit" value="iniciar sesión" class="btn" name="submit">
+         <input type="submit" value="iniciar sesión" class="btn_1" name="submit">
          <p>¿No tienes una cuenta?
          <a href="register.php">Regristrate ahora</a></p>
          </form>

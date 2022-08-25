@@ -103,14 +103,14 @@
    top:1rem; left:1rem;
    padding:1rem;
    border-radius: .5rem;
-   background-color: var(--red);
+   background-color: var(--orange);
    font-size: 1.8rem;
    color:var(--white);
 }
 
 .products .box-container .box .price span{
    font-size: 2.5rem;
-   color:var(--white);
+   color:var(--orange);
    margin:0 .2rem;
 }
 
