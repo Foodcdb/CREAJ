@@ -118,15 +118,6 @@ if(isset($_POST['order'])){
             <input type="email" name="email" placeholder="Ingrese su correo electronico" class="box" required>
          </div>
          <div class="inputBox">
-            <span>Metodo de pago :</span>
-            <select name="method" class="box" required>
-               <option value="cash on delivery">Dinero en efectivo</option>
-               <option value="credit card">Tarjeta de credito</option>
-               <option value="paytm">Criptomoneda</option>
-               <option value="paypal">paypal</option>
-            </select>
-         </div>
-         <div class="inputBox">
             <span>línea de dirección 01 :</span>
             <input type="text" name="flat" placeholder="e.j.Nuero de calle" class="box" required>
          </div>
@@ -144,17 +135,14 @@ if(isset($_POST['order'])){
          </div>
          <div class="inputBox">
             <span>país:</span>
-            <input type="text" name="country" placeholder="e.j. India" class="box" required>
+            <input type="text" name="country" placeholder="e.j. San Salvador" class="box" required>
          </div>
-         <div class="inputBox">
-            <span>Código PIN:</span>
-            <input type="number" min="0" name="pin_code" placeholder="e.j. 123456" class="box" required>
-         </div>
+      
       </div>
 
       <input type="submit" name="order" class="btn <?= ($cart_grand_total > 1)?'':'disabled'; ?>" value="ordenar">
-
    </form>
+   <a href="tarjeta1.php"><button href="tarjeta1.php">Pagar con tarjeta</button></a>
 
 </section>
 

@@ -36,6 +36,9 @@ close.addEventListener('click',() =>{
 //Degradado//
 
 
+//Metodo de pago//
+
+ 
 
 
 

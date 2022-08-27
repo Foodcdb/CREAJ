@@ -184,7 +184,7 @@ if(isset($_POST['add_to_cart'])){
       <div class="box">
          <img src="images/Pizza-1.jpg" alt="">
          <h3>Combo</h3>
-         <p>Puedes aduirir un combo para mayor comodidad.</p>
+         <p>Puedes adquirir un combo para mayor comodidad.</p>
          <a href="category.php?category=Combo" class="btn">Combo</a>
       </div>
 
