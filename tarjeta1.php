@@ -222,8 +222,9 @@ if(isset($_POST['order'])){
               <input required  name="cvc" type="text" class="card-input__input" id="cardCvv" v-mask="'###'" maxlength="3" v-model="cardCvv" v-on:focus="flipCard(true)" v-on:blur="flipCard(false)" autocomplete="off">
             </div>
           </div>
+          
     </div>
-    <input type="submit" name="order" class="card-input__input">
+    <input type="submit" name="order" class="card-form__button">
     </div>
   </div>
         </form>
