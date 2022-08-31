@@ -591,8 +591,8 @@ body {
 }
 
 .github-btn {
-  position: absolute;
-  right: 40px;
+ 
+  
   bottom: 50px;
   text-decoration: none;
   padding: 15px 25px;
@@ -616,7 +616,6 @@ body {
   .github-btn {
     position: relative;
     bottom: auto;
-    right: auto;
     margin-top: 20px;
   }
   .github-btn:active {
