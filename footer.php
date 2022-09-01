@@ -34,15 +34,14 @@
          <a href="#"> <i class="fab fa-twitter"></i> Twitter </a>
          <a href="#"> <i class="fab fa-instagram"></i> Instagram </a>
       </div>
-      <div id="google_translate_element" class="google"></div>
 
-<script type="text/javascript">
-function googleTranslateElementInit() {
-	new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'ca,eu,gl,en,fr,it,pt,de', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true}, 'google_translate_element');
-        }
-</script>
+<!---ESPACIO PARA TRADUCCION-->
+<div id="google_translate_element_id" class="google"></div>
 
-<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="text/javascript" src="../CREAJ/js/translate.js"></script>
+<!---ESPACIO PARA TRADUCCION-->
+
+
 
    </section>
 

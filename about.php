@@ -52,7 +52,7 @@ if(!isset($user_id)){
          <a href="shop.php" class="btn">Nuestra tienda</a>
       </div>
 
-   </div>
+   </div> 
 
 </section>
 

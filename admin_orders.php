@@ -17,7 +17,7 @@ if(isset($_POST['update_order'])){
    $update_payment = filter_var($update_payment, FILTER_SANITIZE_STRING);
    $update_orders = $conn->prepare("UPDATE `orders` SET payment_status = ? WHERE id = ?");
    $update_orders->execute([$update_payment, $order_id]);
-   $message[] = 'payment has been updated!';
+   $message[] = 'el pago ha sido actualizado';
 
 };
 
@@ -64,21 +64,21 @@ if(isset($_GET['delete'])){
             while($fetch_orders = $select_orders->fetch(PDO::FETCH_ASSOC)){
       ?>
       <div class="box">
-         <p> user id : <span><?= $fetch_orders['user_id']; ?></span> </p>
-         <p> placed on : <span><?= $fetch_orders['placed_on']; ?></span> </p>
-         <p> name : <span><?= $fetch_orders['name']; ?></span> </p>
+         <p> id usuario : <span><?= $fetch_orders['user_id']; ?></span> </p>
+         <p> colocado : <span><?= $fetch_orders['placed_on']; ?></span> </p>
+         <p> nombre : <span><?= $fetch_orders['name']; ?></span> </p>
          <p> email : <span><?= $fetch_orders['email']; ?></span> </p>
-         <p> number : <span><?= $fetch_orders['number']; ?></span> </p>
-         <p> address : <span><?= $fetch_orders['address']; ?></span> </p>
-         <p> total products : <span><?= $fetch_orders['total_products']; ?></span> </p>
-         <p> total price : <span>$<?= $fetch_orders['total_price']; ?>/-</span> </p>
-         <p> payment method : <span><?= $fetch_orders['method']; ?></span> </p>
+         <p> numero : <span><?= $fetch_orders['number']; ?></span> </p>
+         <p> direccion : <span><?= $fetch_orders['address']; ?></span> </p>
+         <p> total productos : <span><?= $fetch_orders['total_products']; ?></span> </p>
+         <p> total precio : <span>$<?= $fetch_orders['total_price']; ?>/-</span> </p>
+         <p> metodo de pago : <span><?= $fetch_orders['method']; ?></span> </p>
          <form action="" method="POST">
             <input type="hidden" name="order_id" value="<?= $fetch_orders['id']; ?>">
             <select name="update_payment" class="drop-down">
                <option value="" selected disabled><?= $fetch_orders['payment_status']; ?></option>
-               <option value="pending">Pendiente</option>
-               <option value="completed">Completado</option>
+               <option value="pendiente">Pendiente</option>
+               <option value="completado">Completado</option>
             </select>
             <div class="flex-btn">
                <input type="submit" name="update_order" class="option-btn" value="udate">
