@@ -36,5 +36,8 @@ $cabeceras .= 'Bcc: birthdaycheck@example.com' . "\r\n";*/
 mail($email, $título, $mensaje, $cabeceras);
 
 
-include 'register.php';
+session_start();
+
+$_SESSION['user_id'] = $row['id'];
+header('location:home.php');
 ?>

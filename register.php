@@ -34,10 +34,6 @@ if(isset($_POST['submit'])){
    if($email == "" || strpos($email, "@")=== false){
       $message[]=("El correo no puede ser vacio.");
    }
-
-   elseif($select->rowCount() > 0){
-      $message[] = '¡El correo electrónico del usuario ya existe!';
-   }
    if($pass=="" || strlen($pass) < 7){
       $message[]=("El campo contraseña no puede estar vacio, ni tener menos de 8 caracteres");
       
@@ -46,6 +42,9 @@ if(isset($_POST['submit'])){
       if($pass != $cpass){
          $message[] = '¡Confirmar contraseña no coincide!';
        
+      }
+      if($select->rowCount() > 0){
+         $message[] = '¡El correo electrónico del usuario ya existe!';
       }
       else{
          
@@ -120,7 +119,7 @@ if(isset($message)){
 <div class="login-wp">
    <section class="form-container">
 
-      <form action="email.php" enctype="multipart/form-data" method="POST">
+      <form action="" enctype="multipart/form-data" method="POST">
        <h3>registrarse ahora</h3>
        <input type="text" name="name" class="box" placeholder="Ingresa tu nombre" >
        <input type="email" name="email" class="box" placeholder="Ingresa tu correo">
