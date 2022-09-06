@@ -28,13 +28,13 @@ if(isset($_POST['add_to_wishlist'])){
    $check_cart_numbers->execute([$p_name, $user_id]);
 
    if($check_wishlist_numbers->rowCount() > 0){
-      $message[] = 'Ya agregado a la lista de deseos!';
+      $message[] = '¡Ya agregado a la lista de deseos!';
    }elseif($check_cart_numbers->rowCount() > 0){
-      $message[] = 'Agregado a la lista de deseos!';
+      $message[] = '¡Agregado a la lista de deseos!';
    }else{
       $insert_wishlist = $conn->prepare("INSERT INTO `wishlist`(user_id, pid, name, price, image) VALUES(?,?,?,?,?)");
       $insert_wishlist->execute([$user_id, $pid, $p_name, $p_price, $p_image]);
-      $message[] = 'Agregado a la lista de deseos!';
+      $message[] = '¡Agregado a la lista de deseos!';
    }
 
 }
@@ -56,7 +56,7 @@ if(isset($_POST['add_to_cart'])){
    $check_cart_numbers->execute([$p_name, $user_id]);
 
    if($check_cart_numbers->rowCount() > 0){
-      $message[] = 'Agregado al carito!';
+      $message[] = '¡Agregado al carito!';
    }else{
 
       $check_wishlist_numbers = $conn->prepare("SELECT * FROM `wishlist` WHERE name = ? AND user_id = ?");
@@ -69,7 +69,7 @@ if(isset($_POST['add_to_cart'])){
 
       $insert_cart = $conn->prepare("INSERT INTO `cart`(user_id, pid, name, price, quantity, image) VALUES(?,?,?,?,?,?)");
       $insert_cart->execute([$user_id, $pid, $p_name, $p_price, $p_qty, $p_image]);
-      $message[] = 'Agregar al carrito!';
+      $message[] = '¡Agregar al carrito!';
    }
 
 }
@@ -97,7 +97,7 @@ if(isset($_POST['add_to_cart'])){
 
 <section class="p-category">
 
-   <a href="category.php?category=Hamburguesas">Hamburguesas</a>
+   <a href="category.php?category=Hamburguesas">Hamburguesa</a>
    <a href="category.php?category=Pizzas">Pizza</a>
    <a href="category.php?category=Pollo">Pollo</a>
    <a href="category.php?category=Bebidas">Bebida</a>

@@ -119,23 +119,23 @@ if(isset($_POST['order'])){
          </div>
          <div class="inputBox">
             <span>línea de dirección 01 :</span>
-            <input type="text" name="flat" placeholder="e.j.Nuero de calle" class="box" required>
+            <input type="text" name="flat" placeholder="e.j.Numero de calle" class="box" required>
          </div>
          <div class="inputBox">
             <span>línea de dirección 02:</span>
-            <input type="text" name="street" placeholder="e.j. nombre de calle" class="box" required>
+            <input type="text" name="street" placeholder="e.j. Nombre de calle" class="box" required>
          </div>
          <div class="inputBox">
             <span>Ciudad</span>
-            <input type="text" name="city" placeholder="e.j. mumbai" class="box" required>
+            <input type="text" name="city" placeholder="e.j. Soyapango" class="box" required>
          </div>
          <div class="inputBox">
             <span>Estado :</span>
-            <input type="text" name="state" placeholder="e.j. maharashtra" class="box" required>
+            <input type="text" name="state" placeholder="e.j. San Salvador" class="box" required>
          </div>
          <div class="inputBox">
             <span>país:</span>
-            <input type="text" name="country" placeholder="e.j. San Salvador" class="box" required>
+            <input type="text" name="country" placeholder="e.j. EL Salvador" class="box" required>
          </div>
       
       </div>

@@ -47,7 +47,7 @@ if(isset($_POST['submit'])){
        
       }
       if($select->rowCount() > 0){
-         $message[] = '¡El correo electrónico del usuario ya existe!';
+         $message[] = '¡El correo electrónico ya existe!';
       }
       else{
          
@@ -96,6 +96,7 @@ if(isset($_POST['submit'])){
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Registro</title>
 
+
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
@@ -130,7 +131,7 @@ if(isset($message)){
        <input type="password" name="pass" class="box" placeholder="Ingresa tu contraseña">
        <input type="password" name="cpass" class="box" placeholder="confirma tu contraseña">
        <input type="file" name="image" class="box" require accept="image/jpg, image/jpeg, image/png">
-       <input type="submit" value="registrase ahora" class="btn" name="submit">
+       <input type="submit" value="registrarse ahora" class="btn" name="submit">
         <p>¿Ya tienes una cuenta? <a href="login.php">Inicia sesión</a></p>
       </form>
 

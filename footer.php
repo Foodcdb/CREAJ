@@ -7,21 +7,19 @@
          <a href="home.php"> <i class="fas fa-angle-right"></i>Inicio</a>
          <a href="shop.php"> <i class="fas fa-angle-right"></i>Tienda</a>
          <a href="contact.php"> <i class="fas fa-angle-right"></i>Contactanos</a>
+
          <a href="about.php"> <i class="fas fa-angle-right"></i>Acerca de</a>
-         <a href="contact.php"> <i class="fas fa-angle-right"></i>contactanos</a>
+         <a href="contact.php"> <i class="fas fa-angle-right"></i>Contactanos</a>
       </div>
 
       <div class="box">
          <h3>links</h3>
          <a href="cart.php"> <i class="fas fa-angle-right"></i> Carrito</a>
          <a href="wishlist.php"> <i class="fas fa-angle-right"></i> Lista de deseos</a>
-         <a href="login.php"> <i class="fas fa-angle-right"></i> Inicio</a>
-         <a href="register.php"> <i class="fas fa-angle-right"></i> Registro</a>
       </div>
 
       <div class="box">
          <h3>Informacion</h3>
-         <p> <i class="fas fa-phone"></i>+503 8765-8945</p>
          <p> <i class="fas fa-phone"></i>+503 2315-5678</p>
          <p> <i class="fas fa-envelope"></i> creaj2022@gmail.com</p>
          <p> <i class="fas fa-map-marker-alt"></i>Ciudadela Don Bosco,Colegio don Bosco</p>

@@ -81,8 +81,8 @@ if(isset($_GET['delete'])){
                <option value="completado">Completado</option>
             </select>
             <div class="flex-btn">
-               <input type="submit" name="update_order" class="option-btn" value="udate">
-               <a href="admin_orders.php?delete=<?= $fetch_orders['id']; ?>" class="delete-btn" onclick="return confirm('delete this order?');">delete</a>
+               <input type="submit" name="update_order" class="option-btn" value="actualizar">
+               <a href="admin_orders.php?delete=<?= $fetch_orders['id']; ?>" class="delete-btn" onclick="return confirm('¿quieres borrar esta orden?');">delete</a>
             </div>
          </form>
       </div>

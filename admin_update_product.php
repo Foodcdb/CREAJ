@@ -88,8 +88,8 @@ if(isset($_POST['update_product'])){
       <input type="hidden" name="old_image" value="<?= $fetch_products['image']; ?>">
       <input type="hidden" name="pid" value="<?= $fetch_products['id']; ?>">
       <img src="uploaded_img/<?= $fetch_products['image']; ?>" alt="">
-      <input type="text" name="name" placeholder="enter product name" required class="box" value="<?= $fetch_products['name']; ?>">
-      <input type="number" name="price" min="0" step="0.01" placeholder="enter product price" required class="box" value="<?= $fetch_products['price']; ?>">
+      <input type="text" name="name" placeholder="introduzca el nombre del producto" required class="box" value="<?= $fetch_products['name']; ?>">
+      <input type="number" name="price" min="0" step="0.01" placeholder="introduzca el precio del producto" required class="box" value="<?= $fetch_products['price']; ?>">
       <select name="category" class="box" required>
          <option selected><?= $fetch_products['category']; ?></option>
          <option value="Hamburguesa">Hamburguesas</option>
@@ -97,7 +97,7 @@ if(isset($_POST['update_product'])){
          <option value="Pollo">Pollo</option>
          <option value="Bebidas">Bebidas</option>
       </select>
-      <textarea name="details" required placeholder="enter product details" class="box" cols="30" rows="10"><?= $fetch_products['details']; ?></textarea>
+      <textarea name="details" required placeholder="introduzca los detalles del producto" class="box" cols="30" rows="10"><?= $fetch_products['details']; ?></textarea>
       <input type="file" name="image" class="box" accept="image/jpg, image/jpeg, image/png">
       <div class="flex-btn">
          <input type="submit" class="btn" value="Actualizar producto" name="update_product">
@@ -107,7 +107,7 @@ if(isset($_POST['update_product'])){
    <?php
          }
       }else{
-         echo '<p class="empty">no products found!</p>';
+         echo '<p class="empty">no se ha encontrado ningún producto.</p>';
       }
    ?>
 

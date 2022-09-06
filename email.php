@@ -13,7 +13,7 @@ $mensaje;
 
 $mensaje="Bienvenido a un nuevo mundo de la comida";
 // título
-$título = 'FOOD KINDOM';
+$título = 'FOOD KINGDOOM';
 
 // mensaje
 $mensaje = '
