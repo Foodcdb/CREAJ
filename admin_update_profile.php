@@ -29,14 +29,14 @@ if(isset($_POST['update_profile'])){
 
    if(!empty($image)){
       if($image_size > 2000000){
-         $message[] = 'image size is too large!';
+         $message[] = 'el tamaño de la imagen es demasiado grande';
       }else{
          $update_image = $conn->prepare("UPDATE `users` SET image = ? WHERE id = ?");
          $update_image->execute([$image, $admin_id]);
          if($update_image){
             move_uploaded_file($image_tmp_name, $image_folder);
             unlink('uploaded_img/'.$old_image);
-            $message[] = 'image updated successfully!';
+            $message[] = '¡imagen actualizada con éxito!';
          };
       };
    };

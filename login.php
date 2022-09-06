@@ -31,7 +31,7 @@ if(isset($_POST['submit'])){
          header('location:home.php');
 
       }else{
-         $message[] = 'no user found!';
+         $message[] = 'no se ha encontrado ningún usuario.';
       }
 
    }else{

@@ -148,7 +148,7 @@ if(isset($_GET['delete'])){
    <?php
       }
    }else{
-      echo '<p class="empty">now products added yet!</p>';
+      echo '<p class="empty">¡nuevos productos añadidos!</p>';
    }
    ?>
 

@@ -44,11 +44,11 @@ if(!isset($user_id)){
          while($fetch_orders = $select_orders->fetch(PDO::FETCH_ASSOC)){ 
    ?>
    <div class="box">
-      <p> placed on : <span><?= $fetch_orders['placed_on']; ?></span> </p>
+      <p> colocado en : <span><?= $fetch_orders['placed_on']; ?></span> </p>
       <p> nombre : <span><?= $fetch_orders['name']; ?></span> </p>
       <p> Numero : <span><?= $fetch_orders['number']; ?></span> </p>
-      <p> Correos : <span><?= $fetch_orders['email']; ?></span> </p>
-      <p> Direction  : <span><?= $fetch_orders['address']; ?></span> </p>
+      <p> Correo : <span><?= $fetch_orders['email']; ?></span> </p>
+      <p> Direccion  : <span><?= $fetch_orders['address']; ?></span> </p>
       <p> Metodo de pago : <span><?= $fetch_orders['method']; ?></span> </p>
       <p> Tu orden : <span><?= $fetch_orders['total_products']; ?></span> </p>
       <p> total : <span>$<?= $fetch_orders['total_price']; ?>/-</span> </p>
