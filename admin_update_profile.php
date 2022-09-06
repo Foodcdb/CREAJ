@@ -51,9 +51,9 @@ if(isset($_POST['update_profile'])){
 
    if(!empty($update_pass) AND !empty($new_pass) AND !empty($confirm_pass)){
       if($update_pass != $old_pass){
-         $message[] = 'contraseña anterior no coincide!';
+         $message[] = 'Contraseña anterior no coincide!';
       }elseif($new_pass != $confirm_pass){
-         $message[] = 'confirmar contraseña no coincide!';
+         $message[] = 'Confirmar contraseña no coincide!';
       }else{
          $update_pass_query = $conn->prepare("UPDATE `users` SET password = ? WHERE id = ?");
          $update_pass_query->execute([$confirm_pass, $admin_id]);
@@ -92,21 +92,21 @@ if(isset($_POST['update_profile'])){
       <img src="uploaded_img/<?= $fetch_profile['image']; ?>" alt="">
       <div class="flex">
          <div class="inputBox">
-            <span>usuario :</span>
+            <span>Usuario :</span>
             <input type="text" name="name" value="<?= $fetch_profile['name']; ?>" placeholder="Actualizar nombre de usuario" required class="box">
-            <span>email :</span>
+            <span>Email :</span>
             <input type="email" name="email" value="<?= $fetch_profile['email']; ?>" placeholder="Actualizar correo electrónico" required class="box">
-            <span>actualizar imagen :</span>
+            <span>Actualizar imagen :</span>
             <input type="file" name="image" accept="image/jpg, image/jpeg, image/png" class="box">
             <input type="hidden" name="old_image" value="<?= $fetch_profile['image']; ?>">
          </div>
          <div class="inputBox">
             <input type="hidden" name="old_pass" value="<?= $fetch_profile['password']; ?>">
-            <span>antigua contraseña :</span>
+            <span>Antigua contraseña :</span>
             <input type="password" name="update_pass" placeholder="Ingrese la contraseña anterior" class="box">
-            <span>nueva contraseña :</span>
+            <span>Nueva contraseña :</span>
             <input type="password" name="new_pass" placeholder="Ingrese nueva contraseña" class="box">
-            <span>confirmar contraseña:</span>
+            <span>Confirmar contraseña:</span>
             <input type="password" name="confirm_pass" placeholder="Confirmar nueva contraseña" class="box">
          </div>
       </div>

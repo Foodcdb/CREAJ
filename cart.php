@@ -29,7 +29,7 @@ if(isset($_POST['update_qty'])){
    $p_qty = filter_var($p_qty, FILTER_SANITIZE_STRING);
    $update_qty = $conn->prepare("UPDATE `cart` SET quantity = ? WHERE id = ?");
    $update_qty->execute([$p_qty, $cart_id]);
-   $message[] = 'Cantidad del carrito ctualizada';
+   $message[] = 'Cantidad del carrito actualizada';
 }
 
 ?>
@@ -77,7 +77,7 @@ if(isset($_POST['update_qty'])){
          <input type="number" min="1" value="<?= $fetch_cart['quantity']; ?>" class="qty" name="p_qty">
          <input type="submit" value="actualizar" name="update_qty" class="option-btn">
       </div>
-      <div class="sub-total"> sub total : <span>$<?= $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?>/-</span> </div>
+      <div class="sub-total"> sub total: <span>$<?= $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?>/-</span> </div>
    </form>
    <?php
       $grand_total += $sub_total;
@@ -89,10 +89,10 @@ if(isset($_POST['update_qty'])){
    </div>
 
    <div class="cart-total">
-      <p>grand total : <span>$<?= $grand_total; ?>/-</span></p>
+      <p>Total a pagar: <span>$<?= $grand_total; ?>/-</span></p>
       <a href="shop.php" class="option-btn">continuar comprando</a>
       <a href="cart.php?delete_all" class="delete-btn <?= ($grand_total > 1)?'':'disabled'; ?>">Eliminar todo</a>
-      <a href="checkout.php" class="btn <?= ($grand_total > 1)?'':'disabled'; ?>">continuar a pagar</a>
+      <a href="checkout.php" class="btn <?= ($grand_total > 1)?'':'disabled'; ?>">Continuar a pagar</a>
    </div>
 
 </section>

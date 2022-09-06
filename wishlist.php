@@ -40,7 +40,7 @@ if(isset($_POST['add_to_cart'])){
 
       $insert_cart = $conn->prepare("INSERT INTO `cart`(user_id, pid, name, price, quantity, image) VALUES(?,?,?,?,?,?)");
       $insert_cart->execute([$user_id, $pid, $p_name, $p_price, $p_qty, $p_image]);
-      $message[] = 'agregado al carrito!';
+      $message[] = 'Agregado al carrito!';
    }
 
 }
@@ -113,13 +113,13 @@ if(isset($_GET['delete_all'])){
       $grand_total += $fetch_wishlist['price'];
       }
    }else{
-      echo '<p class="empty">Tu lista de deseos esta vacia</p>';
+      echo '<p class="empty">Tu lista de deseos esta vacía</p>';
    }
    ?>
    </div>
 
    <div class="wishlist-total">
-      <p>Total a pagar : <span>$<?= $grand_total; ?>/-</span></p>
+      <p>Total a pagar: <span>$<?= $grand_total; ?>/-</span></p>
       <a href="shop.php" class="option-btn">Continuar Comprando</a>
       <a href="wishlist.php?delete_all" class="delete-btn <?= ($grand_total > 1)?'':'disabled'; ?>">Eliminar todo</a>
    </div>

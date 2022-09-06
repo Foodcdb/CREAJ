@@ -28,7 +28,7 @@ if(isset($_POST['add_to_wishlist'])){
    $check_cart_numbers->execute([$p_name, $user_id]);
 
    if($check_wishlist_numbers->rowCount() > 0){
-      $message[] = 'ya agregado a la lista de deseos!';
+      $message[] = 'Ya agregado a la lista de deseos!';
    }elseif($check_cart_numbers->rowCount() > 0){
       $message[] = 'Agregado a la lista de deseos!';
    }else{
@@ -69,7 +69,7 @@ if(isset($_POST['add_to_cart'])){
 
       $insert_cart = $conn->prepare("INSERT INTO `cart`(user_id, pid, name, price, quantity, image) VALUES(?,?,?,?,?,?)");
       $insert_cart->execute([$user_id, $pid, $p_name, $p_price, $p_qty, $p_image]);
-      $message[] = 'agregar al carrito!';
+      $message[] = 'Agregar al carrito!';
    }
 
 }
@@ -132,7 +132,7 @@ if(isset($_POST['add_to_cart'])){
    <?php
       }
    }else{
-      echo '<p class="empty">no hay productos añadidos todavía!</p>';
+      echo '<p class="empty">No hay productos añadidos todavía!</p>';
    }
    ?>
 
