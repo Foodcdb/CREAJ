@@ -810,4 +810,54 @@ padding: 10px 25px;
 }
 
 
-/*TARJETA DE CREDITO*/
+.google {
+   /* position: absolute; */
+   z-index: 500;
+   font-size: 0px;
+   border-radius: 36px;
+   font-family: Arial, Helvetica, sans-serif;
+ }
+ 
+ .goog-te-gadget .goog-te-combo {
+   margin: 4px 0;
+   padding: 7px;
+ }
+ 
+ .translated-ltr {
+   margin-top: -40px;
+ }
+ .translated-ltr {
+   margin-top: -40px;
+ }
+ .goog-te-banner-frame {
+   display: none;
+   margin-top: -20px;
+ }
+ 
+ .goog-logo-link {
+   display: none !important;
+ }
+ 
+ .goog-te-gadget {
+   color: transparent !important;
+ }
+ 
+ .goog-te-combo,
+ .goog-te-ftab,
+ .goog-te-menu,
+ .goog-te-menu2,
+ .goog-te-balloon {
+   background-color: var(--blue) !important;
+   color: white;
+   font-weight: 100;
+   font-family: "Josefin Sans", sans-serif !important;
+   font-size: 1.3rem !important;
+ }
+ 
+ #google_translate_element_id option {
+   color: #2e2e2e;
+ }
+ 
+ .goog-te-combo option{
+ color: white !important;
+ }

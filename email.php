@@ -1,4 +1,10 @@
 <?php
+
+session_start();
+
+$_SESSION['user_id'] = $row['id'];
+header('location:home.php');
+
 $destinatario ='foodkingdomcreaj@gmail.com';
 //esto es para quien es el correo
 $email= $_POST['email'];
@@ -17,7 +23,7 @@ $mensaje = '
 </head>
 <body>
   <h1>¡Bienvenido a un nuevo reino de la comida!</h1>
-  <img src="https://lh6.googleusercontent.com/aLUwrx-ujKc2kpcjDYw19pPEBu3Jd2wp2yrgC4QSKMiftmGLDEt9fk3Uai6mFqxosnzEsMp3aWau0tuorxBy=w1559-h759" width="50px">
+  <img src="../images/gmail.jpg" width="50px">
 </body>
 </html>
 ';
@@ -36,8 +42,5 @@ $cabeceras .= 'Bcc: birthdaycheck@example.com' . "\r\n";*/
 mail($email, $título, $mensaje, $cabeceras);
 
 
-session_start();
 
-$_SESSION['user_id'] = $row['id'];
-header('location:home.php');
 ?>

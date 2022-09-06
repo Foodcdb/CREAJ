@@ -36,8 +36,11 @@ if(isset($_POST['submit'])){
    }
    if($pass=="" || strlen($pass) < 7){
       $message[]=("El campo contraseña no puede estar vacio, ni tener menos de 8 caracteres");
-      
-   }else{
+   }
+   if($image == ""){
+      $message[]=("El campo imgen no puede ser vacio");
+   }
+   else{
     
       if($pass != $cpass){
          $message[] = '¡Confirmar contraseña no coincide!';
@@ -71,6 +74,7 @@ if(isset($_POST['submit'])){
 
                $_SESSION['user_id'] = $row['id'];
                header('location:home.php');
+               include 'email.php';
             }
             
 
@@ -90,7 +94,7 @@ if(isset($_POST['submit'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>register</title>
+   <title>Registro</title>
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -120,7 +124,7 @@ if(isset($message)){
    <section class="form-container">
 
       <form action="" enctype="multipart/form-data" method="POST">
-       <h3>registrarse ahora</h3>
+       <h3>Registrarse ahora</h3>
        <input type="text" name="name" class="box" placeholder="Ingresa tu nombre" >
        <input type="email" name="email" class="box" placeholder="Ingresa tu correo">
        <input type="password" name="pass" class="box" placeholder="Ingresa tu contraseña">

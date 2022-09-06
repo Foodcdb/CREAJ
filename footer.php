@@ -6,7 +6,6 @@
          <h3>Links</h3>
          <a href="home.php"> <i class="fas fa-angle-right"></i>Inicio</a>
          <a href="shop.php"> <i class="fas fa-angle-right"></i>Tienda</a>
-         <a href="about.php"> <i class="fas fa-angle-right"></i>Aserca de</a>
          <a href="contact.php"> <i class="fas fa-angle-right"></i>Contactanos</a>
          <a href="about.php"> <i class="fas fa-angle-right"></i>Acerca de</a>
          <a href="contact.php"> <i class="fas fa-angle-right"></i>contactanos</a>
@@ -33,12 +32,13 @@
          <a href="#"> <i class="fab fa-facebook-f"></i> Facebook </a>
          <a href="#"> <i class="fab fa-twitter"></i> Twitter </a>
          <a href="#"> <i class="fab fa-instagram"></i> Instagram </a>
+         
       </div>
 
 <!---ESPACIO PARA TRADUCCION-->
 <div id="google_translate_element_id" class="google"></div>
 
-<script type="text/javascript" src="../CREAJ/js/translate.js"></script>
+<script type="text/javascript" src="./js/translate.js"></script>
 <!---ESPACIO PARA TRADUCCION-->
 
 
