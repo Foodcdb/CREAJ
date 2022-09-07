@@ -19,7 +19,7 @@ if(isset($_POST['update_order'])){
    $update_orders->execute([$update_payment, $order_id]);
    $message[] = 'el pago ha sido actualizado';
 
-};
+}
 
 if(isset($_GET['delete'])){
 
@@ -33,7 +33,7 @@ if(isset($_GET['delete'])){
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -72,7 +72,6 @@ if(isset($_GET['delete'])){
          <p> direccion : <span><?= $fetch_orders['address']; ?></span> </p>
          <p> total productos : <span><?= $fetch_orders['total_products']; ?></span> </p>
          <p> total precio : <span>$<?= $fetch_orders['total_price']; ?>/-</span> </p>
-         <p> metodo de pago : <span><?= $fetch_orders['method']; ?></span> </p>
          <form action="" method="POST">
             <input type="hidden" name="order_id" value="<?= $fetch_orders['id']; ?>">
             <select name="update_payment" class="drop-down">

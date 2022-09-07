@@ -20,39 +20,63 @@ if(isset($_POST['order'])){
    $email = filter_var($email, FILTER_SANITIZE_STRING);
    $method = $_POST['method'];
    $method = filter_var($method, FILTER_SANITIZE_STRING);
-   $address = 'flat no. '. $_POST['flat'] .' '. $_POST['street'] .' '. $_POST['city'] .' '. $_POST['state'] .' '. $_POST['country'] .' - '. $_POST['pin_code'];
+   $address = 'flat no. '.$_POST['street'] .' '. $_POST['city'] .' '. $_POST['state'] .' '. $_POST['country'] .' '. $_POST['pin_code'];
    $address = filter_var($address, FILTER_SANITIZE_STRING);
    $placed_on = date('d-M-Y');
 
-   $cart_total = 0;
-   $cart_products[] = '';
 
-   $cart_query = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ?");
-   $cart_query->execute([$user_id]);
-   if($cart_query->rowCount() > 0){
-      while($cart_item = $cart_query->fetch(PDO::FETCH_ASSOC)){
-         $cart_products[] = $cart_item['name'].' ( '.$cart_item['quantity'].' )';
-         $sub_total = ($cart_item['price'] * $cart_item['quantity']);
-         $cart_total += $sub_total;
-      };
-   };
 
-   $total_products = implode(', ', $cart_products);
 
-   $order_query = $conn->prepare("SELECT * FROM `orders` WHERE name = ? AND number = ? AND email = ? AND method = ? AND address = ? AND total_products = ? AND total_price = ?");
-   $order_query->execute([$name, $number, $email, $method, $address, $total_products, $cart_total]);
-
-   if($cart_total == 0){
-      $message[] = 'tu carrito esta vacio';
-   }elseif($order_query->rowCount() > 0){
-      $message[] = '¡pedido realizado con éxito!';
-   }else{
-      $insert_order = $conn->prepare("INSERT INTO `orders`(user_id, name, number, email, method, address, total_products, total_price, placed_on) VALUES(?,?,?,?,?,?,?,?,?)");
-      $insert_order->execute([$user_id, $name, $number, $email, $method, $address, $total_products, $cart_total, $placed_on]);
-      $delete_cart = $conn->prepare("DELETE FROM `cart` WHERE user_id = ?");
-      $delete_cart->execute([$user_id]);
-      $message[] = '¡pedido realizado con éxito!';
+   if($name== ""){
+      $message[]="El campo no puede ser vacio";
    }
+   if($name== ""){
+      $message[]="El campo no puede ser vacio";
+   }
+   if($name== ""){
+      $message[]="El campo no puede ser vacio";
+   }
+   if($name== ""){
+      $message[]="El campo no puede ser vacio";
+   }
+   if($name== ""){
+      $message[]="El campo no puede ser vacio";
+   }
+   if($name== ""){
+      $message[]="El campo no puede ser vacio";
+   }else{
+      $cart_total = 0;
+      $cart_products[] = '';
+   
+      $cart_query = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ?");
+      $cart_query->execute([$user_id]);
+      if($cart_query->rowCount() > 0){
+         while($cart_item = $cart_query->fetch(PDO::FETCH_ASSOC)){
+            $cart_products[] = $cart_item['name'].' ( '.$cart_item['quantity'].' )';
+            $sub_total = ($cart_item['price'] * $cart_item['quantity']);
+            $cart_total += $sub_total;
+         };
+      };
+   
+      $total_products = implode(', ', $cart_products);
+   
+      $order_query = $conn->prepare("SELECT * FROM `orders` WHERE name = ? AND number = ? AND email = ? AND method = ? AND address = ? AND total_products = ? AND total_price = ?");
+      $order_query->execute([$name, $number, $email, $method, $address, $total_products, $cart_total]);
+   
+      if($cart_total == 0){
+         $message[] = 'tu carrito esta vacio';
+      }elseif($order_query->rowCount() > 0){
+         $message[] = '¡pedido realizado con éxito!';
+      }else{
+         $insert_order = $conn->prepare("INSERT INTO `orders`(user_id, name, number, email, method, address, total_products, total_price, placed_on) VALUES(?,?,?,?,?,?,?,?,?)");
+         $insert_order->execute([$user_id, $name, $number, $email, $method, $address, $total_products, $cart_total, $placed_on]);
+         $delete_cart = $conn->prepare("DELETE FROM `cart` WHERE user_id = ?");
+         $delete_cart->execute([$user_id]);
+         $message[] = '¡pedido realizado con éxito!';
+      }
+   }
+
+  
 
 }
 
@@ -107,42 +131,42 @@ if(isset($_POST['order'])){
       <div class="flex">
          <div class="inputBox">
             <span>Tu nombre :</span>
-            <input type="text" name="name" placeholder="Ingrese su nombre" class="box" required>
+            <input type="text" name="name" placeholder="Ingrese su nombre" class="box">
          </div>
          <div class="inputBox">
             <span>Tu numero :</span>
-            <input type="number" name="number" placeholder="Ingrese su numero de telefono" class="box" required>
+            <input type="number" name="number" placeholder="Ingrese su numero de telefono" class="box" >
          </div>
          <div class="inputBox">
             <span>Tu correo :</span>
-            <input type="email" name="email" placeholder="Ingrese su correo electronico" class="box" required>
+            <input type="email" name="email" placeholder="Ingrese su correo electronico" class="box" >
          </div>
          <div class="inputBox">
             <span>línea de dirección 01 :</span>
-            <input type="text" name="flat" placeholder="e.j.Numero de calle" class="box" required>
+            <input type="text" name="flat" placeholder="e.j.Numero de calle" class="box" >
          </div>
          <div class="inputBox">
             <span>línea de dirección 02:</span>
-            <input type="text" name="street" placeholder="e.j. Nombre de calle" class="box" required>
+            <input type="text" name="street" placeholder="e.j. Nombre de calle" class="box" >
          </div>
          <div class="inputBox">
             <span>Ciudad</span>
-            <input type="text" name="city" placeholder="e.j. Soyapango" class="box" required>
+            <input type="text" name="city" placeholder="e.j. Soyapango" class="box" >
          </div>
          <div class="inputBox">
-            <span>Estado :</span>
-            <input type="text" name="state" placeholder="e.j. San Salvador" class="box" required>
+            <span>Departamento :</span>
+            <input type="text" name="state" placeholder="e.j. San Salvador" class="box" >
          </div>
          <div class="inputBox">
             <span>país:</span>
-            <input type="text" name="country" placeholder="e.j. EL Salvador" class="box" required>
+            <input type="text" name="country" placeholder="e.j. EL Salvador" class="box" >
          </div>
       
       </div>
 
       <input type="submit" name="order" class="btn <?= ($cart_grand_total > 1)?'':'disabled'; ?>" value="ordenar">
    </form>
-   <a href="tarjeta1.php"><button href="tarjeta1.php">Pagar con tarjeta</button></a>
+   
 
 </section>
 

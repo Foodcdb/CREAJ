@@ -18,7 +18,7 @@ if(!isset($user_id)){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Ordenes</title>
+   <title>ordenar</title>
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -33,7 +33,7 @@ if(!isset($user_id)){
 
 <section class="placed-orders">
 
-   <h1 class="title">Pedidos colocados</h1>
+   <h1 class="title">Pedidos realizados</h1>
 
    <div class="box-container">
 
@@ -49,10 +49,9 @@ if(!isset($user_id)){
       <p> Numero : <span><?= $fetch_orders['number']; ?></span> </p>
       <p> Correo : <span><?= $fetch_orders['email']; ?></span> </p>
       <p> Direccion  : <span><?= $fetch_orders['address']; ?></span> </p>
-      <p> Metodo de pago : <span><?= $fetch_orders['method']; ?></span> </p>
       <p> Tu orden : <span><?= $fetch_orders['total_products']; ?></span> </p>
       <p> total : <span>$<?= $fetch_orders['total_price']; ?>/-</span> </p>
-      <p> estado de pago : <span style="color:<?php if($fetch_orders['payment_status'] == 'pending'){ echo 'red'; }else{ echo 'green'; }; ?>"><?= $fetch_orders['payment_status']; ?></span> </p>
+      <p> estado de pago : <span style="color:<?php if($fetch_orders['payment_status'] == 'pendiente'){ echo 'red'; }else{ echo 'green'; }; ?>"><?= $fetch_orders['payment_status']; ?></span> </p>
    </div>
    <?php
       }

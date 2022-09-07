@@ -85,6 +85,8 @@ if(isset($message)){
          <input type="submit" value="iniciar sesión" class="btn" name="submit">
          <p>¿No tienes una cuenta?
          <a href="register.php">Regristrate ahora</a></p>
+         <p>¿Olvidaste tu contraseña?
+         <a href="validar.php">Recuperar contraseña</a></p>
          </form>
    </section>
 </div>  
