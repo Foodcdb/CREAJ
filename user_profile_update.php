@@ -51,7 +51,7 @@ if(isset($_POST['update_profile'])){
 
    if(!empty($update_pass) AND !empty($new_pass) AND !empty($confirm_pass)){
       if($update_pass != $old_pass){
-         $message[] = '¡contraseña anterior no coincide!';
+         $message[] = '¡Los campos no pueden ser vacios!';
       }elseif($new_pass != $confirm_pass){
          $message[] = '¡contraseña no coincide!';
       }else{

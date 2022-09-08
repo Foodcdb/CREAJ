@@ -18,31 +18,19 @@ if(isset($_POST['order'])){
    $number = filter_var($number, FILTER_SANITIZE_STRING);
    $email = $_POST['email'];
    $email = filter_var($email, FILTER_SANITIZE_STRING);
-   $method = $_POST['method'];
-   $method = filter_var($method, FILTER_SANITIZE_STRING);
-   $address = 'flat no. '.$_POST['street'] .' '. $_POST['city'] .' '. $_POST['state'] .' '. $_POST['country'] .' '. $_POST['pin_code'];
+   // $method = $_POST['method'];
+   // $method = filter_var($method, FILTER_SANITIZE_STRING);
+   $address = 'flat no. '.$_POST['street'] .' '. $_POST['city'] .' '. $_POST['state'] .' '. $_POST['country'];
    $address = filter_var($address, FILTER_SANITIZE_STRING);
    $placed_on = date('d-M-Y');
 
-
-
-
    if($name== ""){
       $message[]="El campo no puede ser vacio";
    }
-   if($name== ""){
+   if($number== ""){
       $message[]="El campo no puede ser vacio";
    }
-   if($name== ""){
-      $message[]="El campo no puede ser vacio";
-   }
-   if($name== ""){
-      $message[]="El campo no puede ser vacio";
-   }
-   if($name== ""){
-      $message[]="El campo no puede ser vacio";
-   }
-   if($name== ""){
+   if($email== ""){
       $message[]="El campo no puede ser vacio";
    }else{
       $cart_total = 0;
@@ -68,7 +56,7 @@ if(isset($_POST['order'])){
       }elseif($order_query->rowCount() > 0){
          $message[] = '¡pedido realizado con éxito!';
       }else{
-         $insert_order = $conn->prepare("INSERT INTO `orders`(user_id, name, number, email, method, address, total_products, total_price, placed_on) VALUES(?,?,?,?,?,?,?,?,?)");
+         $insert_order = $conn->prepare("INSERT INTO `orders`(user_id, name, number, email, address, total_products, total_price, placed_on) VALUES(?,?,?,?,?,?,?,?,?)");
          $insert_order->execute([$user_id, $name, $number, $email, $method, $address, $total_products, $cart_total, $placed_on]);
          $delete_cart = $conn->prepare("DELETE FROM `cart` WHERE user_id = ?");
          $delete_cart->execute([$user_id]);

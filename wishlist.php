@@ -98,7 +98,7 @@ if(isset($_GET['delete_all'])){
          while($fetch_wishlist = $select_wishlist->fetch(PDO::FETCH_ASSOC)){ 
    ?>
    <form action="" method="POST" class="box">
-      <a href="wishlist.php?delete=<?= $fetch_wishlist['id']; ?>" class="fas fa-times" onclick="return confirm('delete this from wishlist?');"></a>
+      <a href="wishlist.php?delete=<?= $fetch_wishlist['id']; ?>" class="fas fa-times" onclick="return confirm('eliminar de la lista de deseos?');"></a>
       <a href="view_page.php?pid=<?= $fetch_wishlist['pid']; ?>" class="fas fa-eye"></a>
       <img src="uploaded_img/<?= $fetch_wishlist['image']; ?>" alt="">
       <div class="name"><?= $fetch_wishlist['name']; ?></div>
