@@ -9,6 +9,7 @@
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/components.css">
+   <link rel="icon" href="images/icon.png" type="icon">
     <title>Validacion</title>
 </head>
 <body>

@@ -55,6 +55,7 @@ if(isset($_POST['submit'])){
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/components.css">
+   <link rel="icon" href="images/icon.png" type="icon">
 
 </head>
 <body>

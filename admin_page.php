@@ -25,6 +25,7 @@ if(!isset($admin_id)){
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/admin_style.css">
+   <link rel="icon" href="images/icon.png" type="icon">
 
 </head>
 <body>

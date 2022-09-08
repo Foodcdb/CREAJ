@@ -90,6 +90,7 @@ if(isset($_POST['add_to_cart'])){
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
+   <link rel="icon" href="images/icon.png" type="icon">
 
 </head>
 <body>
