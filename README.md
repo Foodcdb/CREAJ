@@ -55,7 +55,7 @@ Una vez abierto deberemos inicializar Apache y MySQL
 Luego escribimos localhost en nuestro navegador y damos click en la seccion PHPMYADMIN
 Dentro del phpmyadmin buscamos la opcion de crear nueva base de datos, dentro del espacio que nos muestra agregamos el nombre "shop_db"
 Una vez creada vamos a la base de datos, nos dirigimos a la seccion "importar" seleccionamos nuestro documento esperamos a que importe las tablas
-al finalizar la importacion estaremos listos para ir a nuestra barra del buscador y escribir "localhost/CREAJ" y automaticamente se abrira nuestro proyecto
+al finalizar la importacion estaremos listos para ir a nuestra barra del buscador y escribir "localhost/CREAJ" y automaticamente se abrira nuestro proyecto*
 
 
 ### Requerimientos de tecnologías ###
