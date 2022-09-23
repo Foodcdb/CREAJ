@@ -48,6 +48,16 @@ es un sistema de gestión de bases de datos que cuenta con una doble licencia. P
 *XAMMP:
 es una herramienta de desarrollo que te permite probar tu desarrollo web basado en PHP en tu propio ordenador sin necesidad de tener acceso a internet. Si eres un diseñador web o desarrollador web que recién está comenzando, no es necesario saber sobre las configuraciones de servidores (aun), ya que XAMPP te provee de una configuración totalmente funcional desde el momento que lo instalas.*
 
+
+*Instalación de base de datos:
+Primeramente debemos elegir nuestro navegador preferido, luego abrir la applicacion xammp
+Una vez abierto deberemos inicializar Apache y MySQL
+Luego escribimos localhost en nuestro navegador y damos click en la seccion PHPMYADMIN
+Dentro del phpmyadmin buscamos la opcion de crear nueva base de datos, dentro del espacio que nos muestra agregamos el nombre "shop_db"
+Una vez creada vamos a la base de datos, nos dirigimos a la seccion "importar" seleccionamos nuestro documento esperamos a que importe las tablas
+al finalizar la importacion estaremos listos para ir a nuestra barra del buscador y escribir "localhost/CREAJ" y automaticamente se abrira nuestro proyecto
+
+
 ### Requerimientos de tecnologías ###
 
 * HTML5
